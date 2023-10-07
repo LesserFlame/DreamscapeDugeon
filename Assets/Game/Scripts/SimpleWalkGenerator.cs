@@ -11,7 +11,7 @@ public class SimpleWalkGenerator : AbstractDungeonGenerator
 
     [SerializeField] protected SimpleWalkData randomWalkParameters;
 
-    //[SerializeField] protected TilemapVisulizer tilemapVisulizer;
+    //[SerializeField] protected TilemapVisualizer tilemapVisulizer;
 
     protected override void RunProceduralGeneration()
     {
