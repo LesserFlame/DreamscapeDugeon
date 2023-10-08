@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Emberlynn_Down_0: 4021818364119486928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FleeButton_0: -1456823348359630789
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

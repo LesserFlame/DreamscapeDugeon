@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Emberlynn_Right_0: -6630147292247366778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

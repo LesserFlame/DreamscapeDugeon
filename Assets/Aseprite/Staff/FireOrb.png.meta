@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FireOrb_0: 7323508180056646182
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class TilemapVisualizer : MonoBehaviour
 {
-    [SerializeField] private Tilemap floorTilemap, wallTilemap;
+    [SerializeField] private Tilemap floorTilemap, wallTilemap, overlayTilemap;
 
     [SerializeField] private TileBase floorTile, wallTop, wallSideRight, wallSideLeft, wallBottom, wallFull;
     [SerializeField] private TileBase wallInnerCornerDownLeft, wallInnerCornerDownRight, wallInnerCornerUpLeft, wallInnerCornerUpRight;
@@ -17,7 +17,7 @@ public class TilemapVisualizer : MonoBehaviour
         PaintTiles(floorPositions, floorTilemap, floorTile);
     }
 
-    private void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
+    public void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
     {
         foreach (var position in positions) 
         {
@@ -25,7 +25,53 @@ public class TilemapVisualizer : MonoBehaviour
         }
     }
 
-    private void PaintSingleTile(Tilemap tilemap, TileBase tile, Vector2Int position)
+    public void PaintRoom(RoomInfo room, Vector2Int position)
+    {
+        for (int x = room.floorTilemap.cellBounds.x; x < room.floorTilemap.cellBounds.xMax; x++)
+        {
+            for (int y = room.floorTilemap.cellBounds.y; y < room.floorTilemap.cellBounds.yMax; y++)
+            {
+                Vector3Int cellPosition = new Vector3Int(x, y, 0);
+                
+                TileBase tile = room.floorTilemap.GetTile(cellPosition);
+
+                if (tile != null)
+                {
+                    floorTilemap.SetTile(cellPosition + floorTilemap.WorldToCell((Vector3Int)position), tile);
+                }
+            }
+        }
+        for(int x = room.wallTilemap.cellBounds.x; x < room.wallTilemap.cellBounds.xMax; x++)
+        {
+            for (int y = room.wallTilemap.cellBounds.y; y < room.wallTilemap.cellBounds.yMax; y++)
+            {
+                Vector3Int cellPosition = new Vector3Int(x, y, 0);
+
+                TileBase tile = room.wallTilemap.GetTile(cellPosition);
+
+                if (tile != null)
+                {
+                    wallTilemap.SetTile(cellPosition + wallTilemap.WorldToCell((Vector3Int)position), tile);
+                }
+            }
+        }
+        for(int x = room.overlayTilemap.cellBounds.x; x < room.overlayTilemap.cellBounds.xMax; x++)
+        {
+            for (int y = room.overlayTilemap.cellBounds.y; y < room.overlayTilemap.cellBounds.yMax; y++)
+            {
+                Vector3Int cellPosition = new Vector3Int(x, y, 0);
+
+                TileBase tile = room.overlayTilemap.GetTile(cellPosition);
+
+                if (tile != null)
+                {
+                    overlayTilemap.SetTile(cellPosition + overlayTilemap.WorldToCell((Vector3Int)position), tile);
+                }
+            }
+        }
+    }
+
+    public void PaintSingleTile(Tilemap tilemap, TileBase tile, Vector2Int position)
     {
         var tilePosition = tilemap.WorldToCell((Vector3Int)position);
         tilemap.SetTile(tilePosition, tile);
@@ -35,6 +81,7 @@ public class TilemapVisualizer : MonoBehaviour
     {
         floorTilemap.ClearAllTiles();
         wallTilemap.ClearAllTiles();
+        overlayTilemap.ClearAllTiles();
     }
 
     internal void PaintSingleBasicWall(Vector2Int position, string binaryValue)

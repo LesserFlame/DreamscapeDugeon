@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class NewBehaviourScript : SimpleWalkGenerator
+public class RoomFirstGenerator : SimpleWalkGenerator
 {
     [SerializeField] private int minRoomWidth = 4, minRoomHeight = 4;
     [SerializeField] private int dungeonWidth = 20, dungeonHeight = 20;
@@ -19,7 +19,7 @@ public class NewBehaviourScript : SimpleWalkGenerator
     private void CreateRooms()
     {
         var roomsList = ProceduralAlgorithms.BinarySpacePartioning(new BoundsInt((Vector3Int)startPosition, new Vector3Int(dungeonWidth, dungeonHeight, 0)), minRoomWidth, minRoomHeight);
-      
+        Debug.Log(roomsList.Count);
         HashSet<Vector2Int> floor = CreateSimpleRooms(roomsList);
 
         if (randomWalkRooms) floor = CreateWalkRooms(roomsList);

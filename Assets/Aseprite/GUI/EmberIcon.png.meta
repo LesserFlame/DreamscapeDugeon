@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EmberIcon_0: 4447369702403911963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
