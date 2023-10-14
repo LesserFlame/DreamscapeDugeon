@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(EnemyInfo))]
 public class EnemyDetection : MonoBehaviour
 {
     public bool playerDetected { get; private set; }
@@ -55,7 +56,8 @@ public class EnemyDetection : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //SceneManager.LoadScene(0); //Load battle scene OR maybe enable battle overlay to stay in scene.
+        if (collision.gameObject.tag != playerTag) return;
+        GameManager.Instance.BattleTransition(GetComponent<EnemyInfo>());
     }
     //private void OnDrawGizmos()
     //{

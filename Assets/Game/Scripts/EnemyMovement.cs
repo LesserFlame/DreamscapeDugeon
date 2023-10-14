@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
 {
     private EnemyDetection detection;
     private Rigidbody2D rb;
-    private SpriteRenderer renderer;
+    private new SpriteRenderer renderer;
     [SerializeField] private float chaseForce = 1.0f;
     private void Start()
     {

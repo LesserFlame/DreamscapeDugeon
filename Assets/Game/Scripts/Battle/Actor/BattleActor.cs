@@ -2,21 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleActor : MonoBehaviour
+public abstract class BattleActor : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] BattleAction[] actions;
-    [SerializeField] float health;
-    [SerializeField] float maxHealth;
+    [SerializeField] public List<BattleActionData> actions;
 
-    void Start()
+    [SerializeField] public string actorName;
+    [SerializeField] public float HP;
+    [SerializeField] public float maxHP;
+    [SerializeField] public float baseATK;
+    [SerializeField] public float baseDEF;
+    [SerializeField] public float MP;
+    [SerializeField] public float maxMP;
+
+    public virtual void OnTakeDamage(float baseDamgage)
     {
-        //
+        float trueDamage = baseDamgage - baseDEF;
+        if (trueDamage < 0) { trueDamage = 0; }
+        HP -= trueDamage;
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void OnDeath()
     {
-        //
+        gameObject.SetActive(false);
     }
 }

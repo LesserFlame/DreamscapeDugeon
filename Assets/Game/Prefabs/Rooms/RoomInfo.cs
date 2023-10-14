@@ -10,4 +10,6 @@ public class RoomInfo : MonoBehaviour
     //public Vector2Int roomCenter = Vector2Int.zero;
     public BoundsInt roomSize;
     public Tilemap floorTilemap, wallTilemap, overlayTilemap;
+
+    public List<EnemyInfo> enemies;
 }

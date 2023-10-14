@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class PlayerActor : BattleActor
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnTakeDamage(float damage)
     {
-        
+        base.OnTakeDamage(damage);
+        BattleUIManager.Instance.OnSliderChanged(0, HP, maxHP);
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void OnDeath()
     {
-        
+        BattleManager.Instance.OnPlayerDeath();
     }
 }

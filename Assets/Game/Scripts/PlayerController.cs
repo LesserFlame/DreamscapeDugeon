@@ -61,11 +61,13 @@ public class PlayerController : MonoBehaviour
     {
         int layerIndex = 0;
         AnimatorClipInfo[] clipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex);
-        return clipInfo[0].clip.name;
+        if (clipInfo.Length > 0) return clipInfo[0].clip.name;
+        else return null;
     }
 
+    [System.Obsolete]
     public void ResetAnimation()
     {
-        if (!isMoving) animator.Play(GetCurrentClipName(), 0, 0);
+        if (!isMoving && gameObject.active) animator.Play(GetCurrentClipName(), 0, 0);
     }
 }
