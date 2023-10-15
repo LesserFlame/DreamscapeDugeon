@@ -36,6 +36,8 @@ public class BattleManager : Singleton<BattleManager>
 
     BattleState state = BattleState.BATTLE_INACTIVE;
     float stateTimer = 0;
+    bool victory = false;
+    bool active = false;
 
     void Start()
     {
@@ -60,14 +62,14 @@ public class BattleManager : Singleton<BattleManager>
                     musicSource.clip = music;
                     musicSource.Play();
                 }
-                state = BattleState.PLAYER_DECISION;
 
+                state = BattleState.PLAYER_DECISION;
                 break;
 
             case BattleState.PLAYER_DECISION:
                 //wait for user input
                 ui.detectInput = true;
-                if(Input.GetKeyDown(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.Z))
                 {
                     ui.OnShowButtons(false);
                     ui.OnShowOptions(true);
@@ -90,13 +92,16 @@ public class BattleManager : Singleton<BattleManager>
                 //wait for enemy action
                 if (stateTimer <= 0) OnEnemyAction();
                 break;
-
             case BattleState.BATTLE_STOP:
                 //decide win / loss
+                if (stateTimer <= 0 && victory) state = BattleState.BATTLE_WON;
+                if (stateTimer <= 0 && !victory) state = BattleState.BATTLE_LOST;
                 break;
 
             case BattleState.BATTLE_WON:
                 //give player xp / gold, send to overworld position
+                GameManager.Instance.BattleTransition();
+                state = BattleState.BATTLE_INACTIVE;
                 break;
 
             case BattleState.BATTLE_LOST:
@@ -106,10 +111,12 @@ public class BattleManager : Singleton<BattleManager>
             default:
                 break;
         }
-        if (stateTimer > 0 ) stateTimer -= Time.deltaTime;
+        if (stateTimer > 0) stateTimer -= Time.deltaTime;
+        //Debug.Log(state);
     }
     public void OnStartBattle(List<EnemyData> enemiesData) 
     {
+        active = true;
         activeEnemies.Clear();
         int tempEnemy = 0;
         foreach (var enemy in enemiesData) 
@@ -121,8 +128,8 @@ public class BattleManager : Singleton<BattleManager>
         for (int i = tempEnemy; i < enemies.Count; i++) enemies[i].gameObject.SetActive(false);
 
         ui.OnShowButtons();
-        ui.OnSliderChanged(0, 102, 124);
-        ui.OnSliderChanged(1, 15, 32);
+        ui.OnSliderChanged(0, player.HP, player.maxHP);
+        ui.OnSliderChanged(1, player.MP, player.maxMP);
         ui.OnSelectButton(0);
         ui.OnInitialize();
         state = BattleState.BATTLE_START;
@@ -131,16 +138,22 @@ public class BattleManager : Singleton<BattleManager>
     {
         state = BattleState.PLAYER_ACTION;
         stateTimer = 1;
+        //Debug.Log(state);
     }
     public void OnPlayerAction()
     {
-        state = BattleState.ENEMY_DECISION;
-        stateTimer = 1;
+        if (active)
+        {
+            state = BattleState.ENEMY_DECISION;
+            stateTimer = 1;
+        }
+        //Debug.Log(state);
     }
     public void OnEnemyDecide()
     {
         state = BattleState.ENEMY_ACTION;
         stateTimer = 1;
+        //Debug.Log(state);
     }
     public void OnEnemyAction()
     {
@@ -148,9 +161,21 @@ public class BattleManager : Singleton<BattleManager>
         ui.OnSelectButton(0);
         state = BattleState.PLAYER_DECISION;
     }
-
-    internal void OnPlayerDeath()
+    public void OnEnemyDeath()
+    { 
+        if (activeEnemies.Count <= 0) 
+        {
+            active = false;
+            state = BattleState.BATTLE_STOP; 
+            stateTimer = 3;
+            victory = true;
+        }
+    }
+    public void OnPlayerDeath()
     {
-        throw new NotImplementedException();
+        active = false;
+        state = BattleState.BATTLE_STOP;
+        stateTimer = 3;
+        victory = false;
     }
 }

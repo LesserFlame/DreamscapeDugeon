@@ -72,36 +72,35 @@ public class BattleUIManager : Singleton<BattleUIManager>
                 BattleManager.Instance.OnPlayerDecide();
             }
             menuOption = 0;
-
-            if (Input.anyKeyDown && updateMenus)
-            {
-                switch (menuLayer)
-                {
-                    case 0:
-                        OnShowButtons();
-                        OnSelectButton(menuOption, true);
-                        OnShowOptions(false);
-                        break;
-                    case 1:
-                        OnShowButtons(false);
-                        OnShowOptions();
-                        OnHighlightOptions(menuOption);
-                        optionsMenu.ChangeMenuList(menuLayer - 1);
-                        break;
-                    case 2:
-                        OnShowButtons(false);
-                        OnShowOptions();
-                        OnHighlightOptions(menuOption);
-                        optionsMenu.ChangeMenuList(menuLayer - 1);
-                        break;
-                }
-            }
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
             menuLayer--;
             if (menuLayer < 0) menuLayer = 0;
             menuOption = 0; 
+        }
+        if (Input.anyKeyDown && updateMenus)
+        {
+            switch (menuLayer)
+            {
+                case 0:
+                    OnShowButtons();
+                    OnSelectButton(menuOption, true);
+                    OnShowOptions(false);
+                    break;
+                case 1:
+                    OnShowButtons(false);
+                    OnShowOptions();
+                    OnHighlightOptions(menuOption);
+                    optionsMenu.ChangeMenuList(menuLayer - 1);
+                    break;
+                case 2:
+                    OnShowButtons(false);
+                    OnShowOptions();
+                    OnHighlightOptions(menuOption);
+                    optionsMenu.ChangeMenuList(menuLayer - 1);
+                    break;
+            }
         }
     }
 

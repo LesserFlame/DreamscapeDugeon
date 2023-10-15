@@ -10,6 +10,9 @@ public class BattleActionData : ScriptableObject
     public float damage;
     public float manaCost;
     //animation and other stuff
+    [Header("Battle Effect")]
+    public BattleEffect effect;
+    
     public enum Category
     { 
         ITEM,

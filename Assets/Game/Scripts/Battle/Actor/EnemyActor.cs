@@ -39,5 +39,6 @@ public class EnemyActor : BattleActor
     {
         base.OnDeath();
         BattleManager.Instance.activeEnemies.Remove(this);
+        BattleManager.Instance.OnEnemyDeath();
     }
 }

@@ -7,11 +7,11 @@ public class BattleAction : MonoBehaviour
     [SerializeField] public BattleActionData data;
 
     public BattleActor target;
-    [HideInInspector]public BattleActor owner;
+    [HideInInspector] public BattleActor owner;
 
     private void Start()
     {
-        owner = gameObject.GetComponent<BattleActor>();
+        //owner = gameObject.GetComponent<BattleActor>();
     }
     public void Perform()
     {
@@ -19,8 +19,33 @@ public class BattleAction : MonoBehaviour
         {
             owner.MP -= data.manaCost;
             if (owner.gameObject.CompareTag("Player")) BattleUIManager.Instance.OnSliderChanged(1, owner.MP, owner.maxMP);
-
-            target.OnTakeDamage(owner.baseATK + (data.damage / 10));
         }
+        else ApplyDamage();
+        if (data.effect != null) SpawnEffect();
+    }
+    public void ApplyDamage()
+    {
+        target.OnTakeDamage(owner.baseATK + (data.damage / 10));
+        if (owner.gameObject.CompareTag("Player")) BattleManager.Instance.OnPlayerAction(); //Manually change to enemy turn
+    }
+    public void SpawnEffect()
+    {
+        Transform spawnTransform = owner.transform;
+
+        if (owner.gameObject.CompareTag("Player")) spawnTransform = owner.GetComponent<PlayerActor>().spellTransform;
+
+        BattleEffect effectRef = Instantiate(data.effect, spawnTransform.position, Quaternion.FromToRotation(owner.transform.position, target.transform.position));
+        effectRef.tag = gameObject.tag;
+        effectRef.owner = this;
+        
+        if (effectRef.effectType == BattleEffect.EffectType.PROJECTILE)
+        {
+            var rb = effectRef.gameObject.GetComponent<Rigidbody2D>();
+            Vector2 direction = target.transform.position - owner.transform.position;
+            rb.AddForce(direction * data.effect.force, ForceMode2D.Impulse);
+        }
+
+        //spawnCount--;
+        //if (spawnCount > 0) Invoke("Spawn", spawnDelay);
     }
 }
