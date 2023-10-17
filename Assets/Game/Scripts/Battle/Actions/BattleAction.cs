@@ -11,7 +11,7 @@ public class BattleAction : MonoBehaviour
 
     private void Start()
     {
-        //owner = gameObject.GetComponent<BattleActor>();
+        owner = gameObject.GetComponent<BattleActor>();
     }
     public void Perform()
     {
@@ -26,7 +26,7 @@ public class BattleAction : MonoBehaviour
     public void ApplyDamage()
     {
         target.OnTakeDamage(owner.baseATK + (data.damage / 10));
-        if (owner.gameObject.CompareTag("Player")) BattleManager.Instance.OnPlayerAction(); //Manually change to enemy turn
+        //if (owner.gameObject.CompareTag("Player")) BattleManager.Instance.OnPlayerAction(); //Manually change to enemy turn
     }
     public void SpawnEffect()
     {

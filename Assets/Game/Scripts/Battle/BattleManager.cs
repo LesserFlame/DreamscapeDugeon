@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,9 +16,12 @@ public class BattleManager : Singleton<BattleManager>
     [SerializeField] public PlayerActor player;
     [SerializeField] public List<EnemyActor> enemies;
     [SerializeField] public List<EnemyActor> activeEnemies;
+    private List<BattleActor> actorOrder = new List<BattleActor>();
 
     [Header("UI")]
     [SerializeField] private BattleUIManager ui;
+
+    
 
     //private int enemyCount = 0;
 
@@ -28,6 +32,8 @@ public class BattleManager : Singleton<BattleManager>
         BATTLE_STOP, 
         BATTLE_WON,
         BATTLE_LOST,
+        BATTLE_TURNORDER,
+        BATTLE_NEXTTURN,
         PLAYER_DECISION,
         PLAYER_ACTION,
         ENEMY_DECISION,
@@ -62,8 +68,8 @@ public class BattleManager : Singleton<BattleManager>
                     musicSource.clip = music;
                     musicSource.Play();
                 }
-
-                state = BattleState.PLAYER_DECISION;
+                OnCalculateTurns();
+                //state = BattleState.PLAYER_DECISION;
                 break;
 
             case BattleState.PLAYER_DECISION:
@@ -80,7 +86,11 @@ public class BattleManager : Singleton<BattleManager>
                 //wait for player action
                 ui.HideAll();
                 ui.detectInput = false;
-                if (stateTimer <= 0) OnPlayerAction();
+                if (stateTimer <= 0)
+                {
+                    OnPlayerAction();
+                    actorOrder.Remove(actorOrder[0]);
+                }
                 break;
 
             case BattleState.ENEMY_DECISION:
@@ -90,7 +100,29 @@ public class BattleManager : Singleton<BattleManager>
 
             case BattleState.ENEMY_ACTION:
                 //wait for enemy action
-                if (stateTimer <= 0) OnEnemyAction();
+                //Debug.Log(state.ToString());
+                if (stateTimer <= 0)
+                {
+                    OnEnemyAction();
+                    actorOrder.RemoveAt(0); 
+                    state = BattleState.BATTLE_NEXTTURN;
+                }
+                break;
+            case BattleState.BATTLE_TURNORDER:
+                OnCalculateTurns();
+                break;
+            case BattleState.BATTLE_NEXTTURN:
+                if(actorOrder.Count <= 0) 
+                {
+                    state = BattleState.BATTLE_TURNORDER;
+                    break;
+                }
+                if (actorOrder[0].CompareTag("Player"))
+                {
+                    ui.OnShowButtons();
+                    state = BattleState.PLAYER_DECISION;
+                }
+                else state = BattleState.ENEMY_DECISION;
                 break;
             case BattleState.BATTLE_STOP:
                 //decide win / loss
@@ -144,7 +176,7 @@ public class BattleManager : Singleton<BattleManager>
     {
         if (active)
         {
-            state = BattleState.ENEMY_DECISION;
+            state = BattleState.BATTLE_NEXTTURN;
             stateTimer = 1;
         }
         //Debug.Log(state);
@@ -157,9 +189,11 @@ public class BattleManager : Singleton<BattleManager>
     }
     public void OnEnemyAction()
     {
-        ui.OnShowButtons(true);
-        ui.OnSelectButton(0);
-        state = BattleState.PLAYER_DECISION;
+        //ui.OnShowButtons(true);
+        //ui.OnSelectButton(0);
+        actorOrder[0].OnDecide();
+        //actorOrder.RemoveAt(0);
+        state = BattleState.BATTLE_NEXTTURN;
     }
     public void OnEnemyDeath()
     { 
@@ -177,5 +211,35 @@ public class BattleManager : Singleton<BattleManager>
         state = BattleState.BATTLE_STOP;
         stateTimer = 3;
         victory = false;
+    }    //public void OnNextTurn()
+    //{
+        
+    //}
+    //public void OnNextTurn()
+    //{
+        
+    //}
+    public void OnCalculateTurns()
+    {
+        actorOrder.Clear();
+        foreach (var actor in activeEnemies)
+        {
+            actorOrder.Add(actor);
+            actor.GenerateTempSpeed();
+        }
+        player.GenerateTempSpeed();
+        actorOrder.Add(player);
+        actorOrder = actorOrder.OrderByDescending(actor => actor.tempSpeed).ToList();
+        //foreach (var actor in actorOrder)
+        //{
+        //    Debug.Log(actor.name + ": " + actor.tempSpeed);
+        //}
+        if (actorOrder[0].CompareTag("Player"))
+        {
+            ui.OnShowButtons(true);
+            ui.OnSelectButton(0);
+            state = BattleState.PLAYER_DECISION;
+        }
+        else state = BattleState.ENEMY_DECISION;
     }
 }

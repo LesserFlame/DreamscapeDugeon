@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Animator), typeof(BattleAction))]
 public class EnemyActor : BattleActor
 {
     // Start is called before the first frame update
     private Animator animator;
+    private BattleAction action;
     void Awake()
     {
         animator = GetComponent<Animator>();
+        action = GetComponent<BattleAction>();
+        action.target = BattleManager.Instance.player;
     }
 
     // Update is called once per frame
@@ -26,8 +29,10 @@ public class EnemyActor : BattleActor
         HP = data.maxHP;
         baseATK = data.baseATK;
         baseDEF = data.baseDEF;
+        speed = data.speed;
 
         animator.runtimeAnimatorController = data.animator;
+        actions = data.actions;
     }
     public override void OnTakeDamage(float damage)
     {
@@ -40,5 +45,13 @@ public class EnemyActor : BattleActor
         base.OnDeath();
         BattleManager.Instance.activeEnemies.Remove(this);
         BattleManager.Instance.OnEnemyDeath();
+    }
+
+    public override void OnDecide()
+    {
+        action.data = actions[Random.Range(0, actions.Count)];
+        action.Perform();
+        //BattleManager.On();
+        //Debug.Log(action.data.actionName);
     }
 }

@@ -10,7 +10,9 @@ public class EnemyData : ScriptableObject
     public float maxHP = 10;
     public float baseDEF = 4;
     public float baseATK = 5;
+    public float speed = 2;
 
     public AnimatorController animator;
+    public List<BattleActionData> actions;
 }
 

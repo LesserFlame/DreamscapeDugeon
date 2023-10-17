@@ -18,4 +18,9 @@ public class PlayerActor : BattleActor
     {
         BattleManager.Instance.OnPlayerDeath();
     }
+
+    public override void OnDecide()
+    {
+        //nothing
+    }
 }

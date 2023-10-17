@@ -1747,9 +1747,11 @@ MonoBehaviour:
   HP: 50
   maxHP: 50
   baseATK: 10
-  baseDEF: 5
+  baseDEF: 2
   MP: 50
   maxMP: 50
+  speed: 10
+  tempSpeed: 0
   spellTransform: {fileID: 740949873}
 --- !u!114 &491968635
 MonoBehaviour:
@@ -3135,8 +3137,9 @@ GameObject:
   - component: {fileID: 792680669}
   - component: {fileID: 792680672}
   - component: {fileID: 792680673}
+  - component: {fileID: 792680674}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3251,6 +3254,8 @@ MonoBehaviour:
   baseDEF: 0
   MP: 0
   maxMP: 0
+  speed: 0
+  tempSpeed: 0
 --- !u!61 &792680673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3297,6 +3302,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03125, y: 0.6875}
   m_EdgeRadius: 0
+--- !u!114 &792680674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792680668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dbad0a8aa243d49bd6dbae4fcdfdb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  target: {fileID: 0}
+  owner: {fileID: 0}
 --- !u!1 &837129169
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,8 +4285,9 @@ GameObject:
   - component: {fileID: 1209636569}
   - component: {fileID: 1209636572}
   - component: {fileID: 1209636573}
+  - component: {fileID: 1209636574}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4381,6 +4402,8 @@ MonoBehaviour:
   baseDEF: 0
   MP: 0
   maxMP: 0
+  speed: 0
+  tempSpeed: 0
 --- !u!61 &1209636573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4427,6 +4450,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03125, y: 0.6875}
   m_EdgeRadius: 0
+--- !u!114 &1209636574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209636568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dbad0a8aa243d49bd6dbae4fcdfdb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  target: {fileID: 0}
+  owner: {fileID: 0}
 --- !u!1 &1221324541
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,8 +4615,9 @@ GameObject:
   - component: {fileID: 1315208374}
   - component: {fileID: 1315208377}
   - component: {fileID: 1315208378}
+  - component: {fileID: 1315208379}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4693,6 +4732,8 @@ MonoBehaviour:
   baseDEF: 0
   MP: 0
   maxMP: 0
+  speed: 0
+  tempSpeed: 0
 --- !u!61 &1315208378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4739,6 +4780,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03125, y: 0.6875}
   m_EdgeRadius: 0
+--- !u!114 &1315208379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315208373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dbad0a8aa243d49bd6dbae4fcdfdb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  target: {fileID: 0}
+  owner: {fileID: 0}
 --- !u!1 &1451823939
 GameObject:
   m_ObjectHideFlags: 0
