@@ -2234,11 +2234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7112970480882921767, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6
+      value: 13.55
       objectReference: {fileID: 0}
     - target: {fileID: 7112970480882921767, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: 3.83
       objectReference: {fileID: 0}
     - target: {fileID: 7112970480882921767, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3940,22 +3940,22 @@ PrefabInstance:
     - target: {fileID: 679647491690693360, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
       propertyPath: roomInfo
       value: 
-      objectReference: {fileID: 7747560012062480546}
+      objectReference: {fileID: 1063574833}
     - target: {fileID: 5054999487682268375, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
       propertyPath: m_Name
       value: EnemyWisp (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5054999487682268375, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7112970480882921767, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.548123
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 7112970480882921767, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.205589
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7112970480882921767, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3992,8 +3992,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5054999487682268375, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1063574833}
   m_SourcePrefab: {fileID: 100100000, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
+--- !u!1 &1063574831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5054999487682268375, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
+  m_PrefabInstance: {fileID: 1063574830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1063574832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 679647491690693360, guid: 81efe17e71d12a2448073a9ff8f9cac1, type: 3}
+  m_PrefabInstance: {fileID: 1063574830}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063574831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ec10a0a7a89a944985cb2763d1cf9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1063574833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063574831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b080368234acda747aa172e62c44df0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorPositions: []
+  roomSize:
+    m_Position: {x: 0, y: 0, z: 0}
+    m_Size: {x: 0, y: 0, z: 0}
+  floorTilemap: {fileID: 0}
+  wallTilemap: {fileID: 0}
+  overlayTilemap: {fileID: 0}
+  enemies:
+  - {fileID: 1063574832}
 --- !u!1 &1065467795
 GameObject:
   m_ObjectHideFlags: 0

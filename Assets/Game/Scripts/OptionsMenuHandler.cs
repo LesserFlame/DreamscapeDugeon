@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,6 +43,7 @@ public class OptionsMenuHandler : MonoBehaviour
         switch (id) 
         {
             case 0:
+                //GetPlayerActions();
                 for (int i = 0; i < optionsButtons.Count; i++)
                 {
                     if (i < optionsButtons.Count && i < battleActions.Count)
@@ -72,7 +74,10 @@ public class OptionsMenuHandler : MonoBehaviour
     public void GetPlayerActions()
     {
         battleActions.Clear();
-        battleActions = FindAnyObjectByType<PlayerActor>().actions;
+        foreach(var action in BattleManager.Instance.player.actions)
+        {
+            battleActions.Add(action);
+        }
     }
     
 }
