@@ -11,7 +11,7 @@ public class LayerOrderHandler : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        sprite.sortingOrder = (int)transform.position.y;
+        sprite.sortingOrder = (int)(-transform.position.y * 10);
     }
 
     // Update is called once per frame
