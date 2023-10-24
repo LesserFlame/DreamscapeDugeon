@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e74a113bc0e64f42bee7ae95bed8ec5, type: 3}
   m_Name: RoomsList
   m_EditorClassIdentifier: 
-  roomsInfo:
+  starterRooms:
   - {fileID: 1218564442404225699, guid: 61f07a9e8ace09f4c895f5fdbe4d36c4, type: 3}
+  basicRooms:
   - {fileID: 1218564442404225699, guid: 29d89239319ad3c4fa7f7d09f1073d98, type: 3}
+  basicRoomAmount: 64

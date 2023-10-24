@@ -6,5 +6,5 @@ public class EnemyInfo : MonoBehaviour
 {
     public EnemyData data;
 
-    public RoomInfo roomInfo;
+    //public GameObject roomContainer;
 }

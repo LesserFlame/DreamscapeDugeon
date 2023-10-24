@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -19,7 +20,8 @@ public class GameManager : Singleton<GameManager>
     public void BattleTransition(EnemyInfo instagator)
     {
         List<EnemyData> tempData = new List<EnemyData>();
-        foreach (var enemy in instagator.roomInfo.enemies)
+        var room = instagator.GetComponentInParent<PrefabContainer>();
+        foreach (var enemy in room.GetComponentsInChildren<EnemyInfo>())
         {
             tempData.Add(enemy.data);
             Destroy(enemy.gameObject);

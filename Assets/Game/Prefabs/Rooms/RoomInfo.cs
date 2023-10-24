@@ -6,10 +6,11 @@ using UnityEngine.Tilemaps;
 [System.Serializable]
 public class RoomInfo : MonoBehaviour
 {
-    public List<Vector2Int> doorPositions;
+    public List<Doorway> doorways;
     //public Vector2Int roomCenter = Vector2Int.zero;
     public BoundsInt roomSize;
     public Tilemap floorTilemap, wallTilemap, overlayTilemap;
 
-    public List<EnemyInfo> enemies;
+    //public List<EnemyInfo> enemies;
+    public GameObject prefabContainer;
 }

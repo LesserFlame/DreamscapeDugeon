@@ -101,7 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: houseFurniture_1
+      name: houseFurniture_0
       rect:
         serializedVersion: 2
         x: 33
@@ -146,6 +146,27 @@ TextureImporter:
       name: houseFurniture_3
       rect:
         serializedVersion: 2
+        x: 84
+        y: 96
+        width: 28
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f351f0c573ed854389cd6b60100ed9f
+      internalID: -808089076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_4
+      rect:
+        serializedVersion: 2
         x: 35
         y: 98
         width: 11
@@ -157,8 +178,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f351f0c573ed854389cd6b60100ed9f
-      internalID: -808089076
+      spriteID: 4cb5c8118780a3149a46945f0df557df
+      internalID: -1344786424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 15
+        width: 37
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a19d6bd787d624f9e832e12ccfbac9
+      internalID: -1059274863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_13
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 78
+        width: 3
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92d1ad015f4d7148b49ded1fc330b47
+      internalID: 4180072266024067503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_6
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 83
+        width: 12
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9c2ef4206b81341bff8d09c842d5de
+      internalID: -1315558363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_7
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 84
+        width: 6
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c098fda481bcb54a83bc7d1e2051fdc
+      internalID: -1334101919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_8
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 73
+        width: 7
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d6548890acb6d43b2b035e01d486f3
+      internalID: -1011467804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_9
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 84
+        width: 5
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624add91e7c17c2478eaf1c2a6575785
+      internalID: 183958785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_10
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 73
+        width: 12
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf79d0259258c84ab509f3b6cdefbac
+      internalID: 598519333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_11
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 65
+        width: 8
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89646ef0e3418ea44821b66688c4bad6
+      internalID: 319027274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_12
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 62
+        width: 9
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c339507991a38a4499f4a69968cd5a0c
+      internalID: -1362956818
       vertices: []
       indices: 
       edges: []
@@ -174,11 +384,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      houseFurniture_0: 4180072266024067503
-      houseFurniture_1: -6787668358164919625
+      houseFurniture_0: -6787668358164919625
+      houseFurniture_10: 598519333
+      houseFurniture_11: 319027274
+      houseFurniture_12: -1362956818
+      houseFurniture_13: 4180072266024067503
       houseFurniture_2: 269305852
       houseFurniture_3: -808089076
       houseFurniture_4: -1344786424
+      houseFurniture_5: -1059274863
+      houseFurniture_6: -1315558363
+      houseFurniture_7: -1334101919
+      houseFurniture_8: -1011467804
+      houseFurniture_9: 183958785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

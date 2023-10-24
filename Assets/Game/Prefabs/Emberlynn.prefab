@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -395748929
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 5296703704962629517, guid: 284dd394c6fa0f1499fc8aba4939fee6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.69411767}
@@ -398,10 +398,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.098591544
+    x: 0.6482214
     y: 0
-    width: 0.8034876
-    height: 1.0005568
+    width: 0.6166008
+    height: 0.80689657
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

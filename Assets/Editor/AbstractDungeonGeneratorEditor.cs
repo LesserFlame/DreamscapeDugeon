@@ -20,5 +20,9 @@ public class AbstractDungeonGeneratorEditor : Editor
         {
             generator.GenerateDungeon();
         }
+        if(GUILayout.Button("Destroy Dungeon"))
+        {
+            generator.DestroyDungeon();
+        }
     }
 }

@@ -5,5 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Rooms/RoomsList")]
 public class RoomsList : ScriptableObject
 {
-    public List<RoomInfo> roomsInfo;
+    public List<RoomInfo> starterRooms;
+    public List<RoomInfo> basicRooms;
+
+    public int basicRoomAmount = 0;
 }
