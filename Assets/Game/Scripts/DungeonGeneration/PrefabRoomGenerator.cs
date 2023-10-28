@@ -7,13 +7,14 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
-public class PrefabRoomGenerator : SimpleWalkGenerator
+public class PrefabRoomGenerator : AbstractDungeonGenerator
 {
     //[SerializeField] private int minRoomWidth = 4, minRoomHeight = 4;
     //[SerializeField] private int dungeonWidth = 20, dungeonHeight = 20;
     //[SerializeField, Range(0, 10)] private int offset = 1;
     //[SerializeField] bool randomWalkRooms = false;
     //[SerializeField] private RoomsList roomsListInfo;
+    [SerializeField] private Vector2Int bounds;
     [SerializeField] private RoomsList roomsListInfo;
     [SerializeField] private List<RoomInfo> placedRooms;
     [SerializeField] private List<RoomInfo> doorwayCaps;
@@ -27,7 +28,6 @@ public class PrefabRoomGenerator : SimpleWalkGenerator
 
     protected override void DeleteDungeon()
     {
-        base.DeleteDungeon();
         foreach (var doorway in doorways)
         {
             if (doorway != null) DestroyImmediate(doorway.gameObject);
@@ -146,7 +146,7 @@ public class PrefabRoomGenerator : SimpleWalkGenerator
     }
     private void CreatePrefabRooms()
     {
-        PlacePrefabRoom(roomsListInfo.starterRooms[Random.Range(0, roomsListInfo.starterRooms.Count)], Vector2Int.zero);
+        PlacePrefabRoom(roomsListInfo.starterRooms[Random.Range(0, roomsListInfo.starterRooms.Count)], startPosition);
         for (int i = 0; i < roomsListInfo.basicRoomAmount; i++)
         {
             bool found = false;
@@ -162,21 +162,34 @@ public class PrefabRoomGenerator : SimpleWalkGenerator
             //    if (potentialDoor.direction == door.partnerDirection) { potentialConnection = door; } continue;
             //}
             //Debug.Log(potentialDoor.name + " - " + potentialRoom.name + " - " + potentialConnection.name);
+            int attempts = 0;
             while (!found)
             {
                 potentialDoor = doorways[Random.Range(0, doorways.Count)];
                 potentialRoom = roomsListInfo.basicRooms[Random.Range(0, roomsListInfo.basicRooms.Count)];
                 foreach (var door in potentialRoom.doorways)
                 {
-                    if (potentialDoor.direction == door.partnerDirection) potentialConnection = door; continue;
+                    if (potentialDoor.direction == door.partnerDirection)
+                    {
+                        var gridPosition = tilemapVisualizer.GetGridPosition(potentialDoor.transform.position);
+                        bool inBounds = ((gridPosition.x < bounds.x && gridPosition.y < bounds.y) && (gridPosition.x > -bounds.x && gridPosition.y > -bounds.y));
+                        if (inBounds || bounds == Vector2Int.zero)
+                        {
+                            if (potentialConnection != null && Random.Range(0, 100) < 50) potentialConnection = door;
+                            else potentialConnection = door;
+                        }
+                    }
                 }
                 if (potentialConnection != null) { found = true; }
+                else attempts++;
+
+                if (attempts > 100) { break; }
             }
-            if (potentialRoom != null)
+            if (potentialRoom != null && potentialDoor.room != potentialRoom)
             {
                 //Debug.Log(potentialDoor.name + " - " + potentialRoom.name + " - " + potentialConnection.name);
                 Vector2Int position = tilemapVisualizer.GetGridPosition(potentialDoor.transform.position);
-                
+
                 if (PlacePrefabRoom(potentialRoom, position, potentialDoor))
                 {
                     doorways.Remove(potentialDoor);
@@ -184,6 +197,7 @@ public class PrefabRoomGenerator : SimpleWalkGenerator
                 }
                 else i--;
             }
+            else i--;
         }
     }
     private bool PlacePrefabRoom(RoomInfo room, Vector2Int position, Doorway door = null)

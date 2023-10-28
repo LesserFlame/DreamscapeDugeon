@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Doorway : MonoBehaviour
 {
-    [HideInInspector] public Vector2 directionVector = Vector2.zero;
+    //[HideInInspector] public Vector2 directionVector = Vector2.zero;
     public enum Direction
     {
         NORTH,
@@ -14,13 +14,14 @@ public class Doorway : MonoBehaviour
         SOUTH,
         WEST
     }
+    public RoomInfo room;
     [SerializeField] public Direction direction = Direction.NORTH;
     [SerializeField] public Direction partnerDirection = Direction.SOUTH;
 
     private void Start()
     {
         int id = (int)direction;
-        directionVector = Direction2D.cardinalDirections[id];
+        //directionVector = Direction2D.cardinalDirections[id];
 
         //switch (direction)
         //{
