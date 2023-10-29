@@ -55,6 +55,11 @@ public class BattleUIManager : Singleton<BattleUIManager>
                 menuLayer = 1;
                 swap = false;
             }
+            if (menuOption == 2 && menuLayer == 0 && swap)
+            {
+                BattleManager.Instance.OnPlayerFlee();
+                swap = false;
+            }
             if (menuLayer == 1 && swap)
             {
                 playerAction.data = optionsMenu.battleActions[menuOption];

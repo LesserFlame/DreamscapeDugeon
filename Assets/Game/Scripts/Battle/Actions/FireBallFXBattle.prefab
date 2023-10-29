@@ -4858,6 +4858,7 @@ MonoBehaviour:
   spawnCount: 1
   spawnDelay: 0
   deathDelay: 5
+  owner: {fileID: 0}
   deathEffect: {fileID: 7466170778154516174, guid: e2f3f817da1698648852a2fa8083b041, type: 3}
 --- !u!50 &514567847908299594
 Rigidbody2D:
@@ -4921,7 +4922,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.27
+  m_Radius: 0.09
 --- !u!1001 &1788523590035686289
 PrefabInstance:
   m_ObjectHideFlags: 0

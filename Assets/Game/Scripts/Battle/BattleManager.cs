@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BattleManager : Singleton<BattleManager>
@@ -55,6 +56,7 @@ public class BattleManager : Singleton<BattleManager>
 
     void Update()
     {
+        //if (player.HP <= 0 && active) state = BattleState.BATTLE_STOP;
         switch (state)
         {
             case BattleState.BATTLE_INACTIVE:
@@ -75,11 +77,7 @@ public class BattleManager : Singleton<BattleManager>
             case BattleState.PLAYER_DECISION:
                 //wait for user input
                 ui.detectInput = true;
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    ui.OnShowButtons(false);
-                    ui.OnShowOptions(true);
-                }
+                //if (player.HP <= 0) { state = BattleState.BATTLE_STOP; }
                 break;
 
             case BattleState.PLAYER_ACTION:
@@ -89,10 +87,9 @@ public class BattleManager : Singleton<BattleManager>
                 if (stateTimer <= 0)
                 {
                     OnPlayerAction();
-                    actorOrder.Remove(actorOrder[0]);
+                    actorOrder.RemoveAt(0);
                 }
                 break;
-
             case BattleState.ENEMY_DECISION:
                 //wait for enemy to choose action
                 if (stateTimer <= 0) OnEnemyDecide();
@@ -101,7 +98,7 @@ public class BattleManager : Singleton<BattleManager>
             case BattleState.ENEMY_ACTION:
                 //wait for enemy action
                 //Debug.Log(state.ToString());
-                if (stateTimer <= 0)
+                //if (stateTimer <= 0)
                 {
                     OnEnemyAction();
                     actorOrder.RemoveAt(0); 
@@ -112,6 +109,7 @@ public class BattleManager : Singleton<BattleManager>
                 OnCalculateTurns();
                 break;
             case BattleState.BATTLE_NEXTTURN:
+                if (player.HP <= 0) state = BattleState.BATTLE_STOP;
                 if(actorOrder.Count <= 0) 
                 {
                     state = BattleState.BATTLE_TURNORDER;
@@ -120,12 +118,15 @@ public class BattleManager : Singleton<BattleManager>
                 if (actorOrder[0].CompareTag("Player"))
                 {
                     ui.OnShowButtons();
+                    ui.OnSelectButton(0);
                     state = BattleState.PLAYER_DECISION;
                 }
                 else state = BattleState.ENEMY_DECISION;
                 break;
             case BattleState.BATTLE_STOP:
                 //decide win / loss
+                active = false;
+                ui.HideAll();
                 if (stateTimer <= 0 && victory) state = BattleState.BATTLE_WON;
                 if (stateTimer <= 0 && !victory) state = BattleState.BATTLE_LOST;
                 break;
@@ -138,8 +139,10 @@ public class BattleManager : Singleton<BattleManager>
 
             case BattleState.BATTLE_LOST:
                 //game over, send back to home
+                state = BattleState.BATTLE_INACTIVE;
+                GameManager.Instance.BattleTransition();
+                SceneManager.LoadScene("House");
                 break;
-
             default:
                 break;
         }
@@ -185,6 +188,7 @@ public class BattleManager : Singleton<BattleManager>
     {
         state = BattleState.ENEMY_ACTION;
         stateTimer = 1;
+        if (!active) state = BattleState.BATTLE_STOP;
         //Debug.Log(state);
     }
     public void OnEnemyAction()
@@ -208,10 +212,18 @@ public class BattleManager : Singleton<BattleManager>
     public void OnPlayerDeath()
     {
         active = false;
-        state = BattleState.BATTLE_STOP;
         stateTimer = 3;
+        state = BattleState.BATTLE_STOP;
         victory = false;
-    }    //public void OnNextTurn()
+    }    
+    public void OnPlayerFlee()
+    {
+        active = false;
+        victory = false;
+        state = BattleState.BATTLE_INACTIVE;
+        GameManager.Instance.BattleTransition();
+    }
+    //public void OnNextTurn()
     //{
         
     //}
@@ -221,25 +233,29 @@ public class BattleManager : Singleton<BattleManager>
     //}
     public void OnCalculateTurns()
     {
-        actorOrder.Clear();
-        foreach (var actor in activeEnemies)
+        if (active)
         {
-            actorOrder.Add(actor);
-            actor.GenerateTempSpeed();
+            actorOrder.Clear();
+            foreach (var actor in activeEnemies)
+            {
+                actorOrder.Add(actor);
+                actor.GenerateTempSpeed();
+            }
+            player.GenerateTempSpeed();
+            actorOrder.Add(player);
+            actorOrder = actorOrder.OrderByDescending(actor => actor.tempSpeed).ToList();
+            //foreach (var actor in actorOrder)
+            //{
+            //    Debug.Log(actor.name + ": " + actor.tempSpeed);
+            //}
+            if (actorOrder[0].CompareTag("Player"))
+            {
+                ui.OnShowButtons(true);
+                ui.OnSelectButton(0);
+                state = BattleState.PLAYER_DECISION;
+            }
+            else state = BattleState.ENEMY_DECISION;
         }
-        player.GenerateTempSpeed();
-        actorOrder.Add(player);
-        actorOrder = actorOrder.OrderByDescending(actor => actor.tempSpeed).ToList();
-        //foreach (var actor in actorOrder)
-        //{
-        //    Debug.Log(actor.name + ": " + actor.tempSpeed);
-        //}
-        if (actorOrder[0].CompareTag("Player"))
-        {
-            ui.OnShowButtons(true);
-            ui.OnSelectButton(0);
-            state = BattleState.PLAYER_DECISION;
-        }
-        else state = BattleState.ENEMY_DECISION;
+        else state = BattleState.BATTLE_STOP;
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private Camera mainCamera, battleCamera;
-    [SerializeField] private PlayerController player;
+    [SerializeField] public PlayerController player;
 
     [SerializeField] public bool inBattle = false;
 
@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
         mainCamera.gameObject.SetActive(!inBattle);
         battleCamera.gameObject.SetActive(inBattle);
     }
-
+    
     public void BattleTransition(EnemyInfo instagator)
     {
         List<EnemyData> tempData = new List<EnemyData>();
@@ -31,6 +31,7 @@ public class GameManager : Singleton<GameManager>
     }
     public void BattleTransition()
     {
+        if (mainCamera == null) mainCamera = Camera.main;
         inBattle = !inBattle;
         player.gameObject.SetActive(!inBattle);
         //swap cameras

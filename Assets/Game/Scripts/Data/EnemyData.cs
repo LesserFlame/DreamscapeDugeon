@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine;
 
 [System.Serializable, CreateAssetMenu(fileName = "EnemyData_", menuName = "Enemies/EnemyData")]
@@ -12,7 +12,7 @@ public class EnemyData : ScriptableObject
     public float baseATK = 5;
     public float speed = 2;
 
-    public AnimatorController animator;
+    public Animator animator;
     public List<BattleActionData> actions;
 }
 

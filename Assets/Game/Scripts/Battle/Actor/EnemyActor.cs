@@ -31,13 +31,13 @@ public class EnemyActor : BattleActor
         baseDEF = data.baseDEF;
         speed = data.speed;
 
-        animator.runtimeAnimatorController = data.animator;
+        animator = data.animator;
         actions = data.actions;
     }
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
-        if (HP < 0) { OnDeath(); }
+        if (HP <= 0) { OnDeath(); }
     }
 
     public override void OnDeath()

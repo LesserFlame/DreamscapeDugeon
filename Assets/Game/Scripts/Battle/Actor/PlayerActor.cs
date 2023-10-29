@@ -13,9 +13,11 @@ public class PlayerActor : BattleActor
     {
         base.OnTakeDamage(damage);
         BattleUIManager.Instance.OnSliderChanged(0, HP, maxHP);
+        if (HP <= 0) { OnDeath(); }
     }
     public override void OnDeath()
     {
+        //base.OnDeath();
         BattleManager.Instance.OnPlayerDeath();
     }
 

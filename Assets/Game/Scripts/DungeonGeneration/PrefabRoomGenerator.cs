@@ -21,6 +21,10 @@ public class PrefabRoomGenerator : AbstractDungeonGenerator
     [SerializeField] private List<Doorway> doorways;
     [SerializeField] private List<GameObject> prefabContainers;
 
+    private void Start()
+    {
+        RunProceduralGeneration();
+    }
     protected override void RunProceduralGeneration()
     {
         CreateRooms();
