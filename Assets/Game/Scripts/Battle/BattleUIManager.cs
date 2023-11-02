@@ -24,6 +24,7 @@ public class BattleUIManager : Singleton<BattleUIManager>
     private void Start()
     {
         playerAction = BattleManager.Instance.player.GetComponent<BattleAction>();
+        HideAll();
     }
     private void Update()
     {
@@ -109,11 +110,13 @@ public class BattleUIManager : Singleton<BattleUIManager>
         }
     }
 
-    public void OnSliderChanged(int id, float value, float maxValue)
+    public void OnSliderChanged(int id, float value, float maxValue, bool lerp = true)
     {
+        if (value < 0) { value = 0; }
         if (id >= 0 && id < sliderHandlers.Count) 
         {
-            sliderHandlers[id].OnValueChanged(value, maxValue);
+            if (lerp) sliderHandlers[id].OnValueChanged(value, maxValue);
+            else sliderHandlers[id].SetValue(value, maxValue);
         }
     }
     public void OnShowButtons(bool show = true)

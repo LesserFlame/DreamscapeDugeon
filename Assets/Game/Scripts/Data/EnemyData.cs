@@ -11,6 +11,7 @@ public class EnemyData : ScriptableObject
     public float baseDEF = 4;
     public float baseATK = 5;
     public float speed = 2;
+    public int rewardXP = 100;
 
     public Animator animator;
     public List<BattleActionData> actions;

@@ -132,7 +132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6684751532686965840
 Transform:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -395748929
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 5296703704962629517, guid: 284dd394c6fa0f1499fc8aba4939fee6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.69411767}
   m_FlipX: 0
@@ -209,12 +209,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8462484840788009738}
+  - component: {fileID: 5312013938663717976}
   - component: {fileID: 7436589350777966441}
   - component: {fileID: 5969586943238411920}
   - component: {fileID: 1183960746433719013}
   - component: {fileID: 3793878178179857800}
   - component: {fileID: 2937972927975412790}
-  - component: {fileID: 5312013938663717976}
   - component: {fileID: 8061188235117531123}
   m_Layer: 3
   m_Name: Emberlynn
@@ -241,6 +241,34 @@ Transform:
   - {fileID: 4780979491031867100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5312013938663717976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767872460014041523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bf1f2165dd2417419a967538b91f1c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactor: {fileID: 4780979491031867100}
+  loadStats: 0
+  speed: 2
+  sprintSpeed: 5
+  animSpeed: 0.3
+  sprintAnimSpeed: 0.6
+  leveler: {fileID: 11400000, guid: 4037fb33458de0e429cc2235d88171a2, type: 2}
+  data:
+    LVL: 1
+    XP: 0
+    HP: 20
+    MP: 15
+    SP: 2
+    ATK: 2
+    DEF: 2
+  levelConfig: {fileID: 11400000, guid: f3d562200f95415448314fa317e46fb2, type: 2}
 --- !u!212 &7436589350777966441
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -424,23 +452,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.2}
   m_Radius: 0.24
---- !u!114 &5312013938663717976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767872460014041523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bf1f2165dd2417419a967538b91f1c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactor: {fileID: 4780979491031867100}
-  speed: 2
-  sprintSpeed: 5
-  animSpeed: 0.3
-  sprintAnimSpeed: 0.6
 --- !u!114 &8061188235117531123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,10 +527,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.7967253
+    x: 0.7109756
     y: 0
-    width: 0.72683716
-    height: 0.7729331
+    width: 0.9512195
+    height: 1.1653386
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

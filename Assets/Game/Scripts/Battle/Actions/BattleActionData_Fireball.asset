@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BattleActionData_Fireball
   m_EditorClassIdentifier: 
   actionName: Fireball
-  damage: 30
+  damage: 5
   manaCost: 5
   effect: {fileID: 8542716512639616017, guid: f8669a2c852b0684181442ff73490b5d, type: 3}
   category: 2

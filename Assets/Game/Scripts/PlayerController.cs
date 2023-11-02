@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public Transform interactor;
 
+    public bool loadStats = false;
     public float speed = 1f;
     public float sprintSpeed = 2f;
     public float animSpeed = 0.25f;
@@ -17,10 +18,23 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private Animator animator;
-    private string lastClip;
+    //private string lastClip;
     private bool isMoving = false;
     private int directionId = 0;
+
+    [Header("Battle Stats")]
+    public PlayerStatLeveler leveler;
+   // public int LVL;
+    //public int XP;
+    //public int HP;
+    //public int MP;
+    //public int SP; //battle speed
+    //public int ATK;
+    //public int DEF;
+    public PlayerData data;
     //[SerializeField] private bool hasLeftSprite;
+    private int requiredXP;
+    [SerializeField] private LevelConfig levelConfig;
 
     private void Start()
     {
@@ -29,7 +43,12 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         var manager = FindFirstObjectByType<GameManager>();
-        if (manager != null) manager.player = this;
+        if (manager != null)
+        {
+            manager.player = this;
+            LoadStats();
+            CalculateRequiredXP();
+        }
     }
 
     private void Update()
@@ -43,6 +62,11 @@ public class PlayerController : MonoBehaviour
                 var interactable = collider.GetComponent<Interactable>();
                 if (interactable != null) { interactable.OnInteract(); }
             }
+        }
+        if (Input.GetKeyDown(KeyCode.X)) 
+        {
+            SaveSystem.DeletePlayer();
+            LoadStats();
         }
     }
     private void FixedUpdate()
@@ -106,6 +130,46 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+
+    public void LevelUp()
+    {
+        data.LVL++;
+        CalculateRequiredXP();
+        LevelUpStats();
+        FindAnyObjectByType<PlayerActor>().OnUpdateStats(this);
+    }
+    public void CalculateRequiredXP()
+    {
+        requiredXP = levelConfig.GetRequiredExp(data.LVL);
+    }
+    public void IncreaseXP(int value)
+    {
+        data.XP += value;
+
+        if (data.XP >= requiredXP) 
+        { 
+            while (data.XP >= requiredXP)
+            {
+                data.XP -= requiredXP;
+                LevelUp();
+            }
+        }
+    }
+    public void LevelUpStats()
+    {
+        int maxIncrease = 5;
+        float ran = Random.Range(0f, 1f);
+        data.HP += Mathf.RoundToInt(leveler.HP.baseStatModifier.Evaluate(ran) * maxIncrease);
+        ran = Random.Range(0f, 1f);
+        data.MP += Mathf.RoundToInt(leveler.MP.baseStatModifier.Evaluate(ran) * maxIncrease);
+        ran = Random.Range(0f, 1f);
+        data.ATK += Mathf.RoundToInt(leveler.ATK.baseStatModifier.Evaluate(ran) * maxIncrease);
+        ran = Random.Range(0f, 1f);
+        data.DEF += Mathf.RoundToInt(leveler.DEF.baseStatModifier.Evaluate(ran) * maxIncrease);
+        ran = Random.Range(0f, 1f);
+        data.SP += Mathf.RoundToInt(leveler.SP.baseStatModifier.Evaluate(ran) * maxIncrease);
+    }
+
     public string GetCurrentClipName()
     {
         int layerIndex = 0;
@@ -123,5 +187,17 @@ public class PlayerController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(interactor.position, 0.1f);
+    }
+
+    private void LoadStats()
+    {
+        data = SaveSystem.LoadPlayer();
+        //LVL = data.LVL;
+        //XP  = data.XP;
+        //HP  = data.HP;
+        //MP  = data.MP;
+        //SP  = data.SP;
+        //ATK = data.ATK;
+        //DEF = data.DEF;
     }
 }

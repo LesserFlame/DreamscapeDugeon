@@ -7,6 +7,7 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private Camera mainCamera, battleCamera;
     [SerializeField] public PlayerController player;
+    [SerializeField] public PlayerData playerData;
 
     [SerializeField] public bool inBattle = false;
 
@@ -15,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     {
         mainCamera.gameObject.SetActive(!inBattle);
         battleCamera.gameObject.SetActive(inBattle);
+        playerData = SaveSystem.LoadPlayer();
     }
     
     public void BattleTransition(EnemyInfo instagator)
@@ -37,5 +39,10 @@ public class GameManager : Singleton<GameManager>
         //swap cameras
         mainCamera.gameObject.SetActive(!inBattle);
         battleCamera.gameObject.SetActive(inBattle);
+
+        //playerData = new PlayerData(player);
+        //Debug.Log(player.LVL);
+        SaveSystem.SavePlayer(player);
+        //Debug.Log("Exit");
     }
 }

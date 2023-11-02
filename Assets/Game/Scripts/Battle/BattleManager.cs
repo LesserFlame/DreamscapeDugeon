@@ -35,6 +35,7 @@ public class BattleManager : Singleton<BattleManager>
         BATTLE_LOST,
         BATTLE_TURNORDER,
         BATTLE_NEXTTURN,
+        BATTLE_WAIT,
         PLAYER_DECISION,
         PLAYER_ACTION,
         ENEMY_DECISION,
@@ -42,6 +43,7 @@ public class BattleManager : Singleton<BattleManager>
     }
 
     BattleState state = BattleState.BATTLE_INACTIVE;
+    BattleState nextState = BattleState.BATTLE_INACTIVE;
     float stateTimer = 0;
     bool victory = false;
     bool active = false;
@@ -52,6 +54,7 @@ public class BattleManager : Singleton<BattleManager>
         {
             musicSource = new AudioSource();
         }
+        ui.HideAll();
     }
 
     void Update()
@@ -70,14 +73,18 @@ public class BattleManager : Singleton<BattleManager>
                     musicSource.clip = music;
                     musicSource.Play();
                 }
-                OnCalculateTurns();
+                ui.HideAll();
+                ui.detectInput = false;
+                state = BattleState.BATTLE_WAIT;
+                nextState = BattleState.BATTLE_TURNORDER;
+                stateTimer = 2;
                 //state = BattleState.PLAYER_DECISION;
                 break;
 
             case BattleState.PLAYER_DECISION:
                 //wait for user input
                 ui.detectInput = true;
-                //if (player.HP <= 0) { state = BattleState.BATTLE_STOP; }
+                if (player.HP <= 0) { state = BattleState.BATTLE_STOP; }
                 break;
 
             case BattleState.PLAYER_ACTION:
@@ -123,6 +130,9 @@ public class BattleManager : Singleton<BattleManager>
                 }
                 else state = BattleState.ENEMY_DECISION;
                 break;
+            case BattleState.BATTLE_WAIT:
+                if (stateTimer <= 0) state = nextState;
+                break;
             case BattleState.BATTLE_STOP:
                 //decide win / loss
                 active = false;
@@ -162,12 +172,14 @@ public class BattleManager : Singleton<BattleManager>
         }
         for (int i = tempEnemy; i < enemies.Count; i++) enemies[i].gameObject.SetActive(false);
 
+        player.OnInitialize(FindFirstObjectByType<PlayerController>());
         ui.OnShowButtons();
-        ui.OnSliderChanged(0, player.HP, player.maxHP);
-        ui.OnSliderChanged(1, player.MP, player.maxMP);
+        ui.OnSliderChanged(0, player.HP, player.maxHP, false);
+        ui.OnSliderChanged(1, player.MP, player.maxMP, false);
         ui.OnSelectButton(0);
         ui.OnInitialize();
         state = BattleState.BATTLE_START;
+
     }
     public void OnPlayerDecide()
     {
@@ -182,6 +194,7 @@ public class BattleManager : Singleton<BattleManager>
             state = BattleState.BATTLE_NEXTTURN;
             stateTimer = 1;
         }
+        else state = BattleState.BATTLE_STOP;
         //Debug.Log(state);
     }
     public void OnEnemyDecide()
@@ -215,6 +228,7 @@ public class BattleManager : Singleton<BattleManager>
         stateTimer = 3;
         state = BattleState.BATTLE_STOP;
         victory = false;
+        player.initialized = false;
     }    
     public void OnPlayerFlee()
     {

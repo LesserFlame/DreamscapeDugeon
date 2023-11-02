@@ -25,7 +25,7 @@ public class BattleAction : MonoBehaviour
     }
     public void ApplyDamage()
     {
-        target.OnTakeDamage(owner.baseATK + (data.damage / 10));
+        target.OnTakeDamage(owner.baseATK * data.damage);
         //if (owner.gameObject.CompareTag("Player")) BattleManager.Instance.OnPlayerAction(); //Manually change to enemy turn
     }
     public void SpawnEffect()

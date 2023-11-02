@@ -105,7 +105,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 33
-        y: 112
+        y: 240
         width: 14
         height: 16
       alignment: 7
@@ -126,7 +126,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 75
+        y: 203
         width: 34
         height: 53
       alignment: 7
@@ -147,7 +147,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 84
-        y: 96
+        y: 224
         width: 28
         height: 30
       alignment: 7
@@ -168,7 +168,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 35
-        y: 98
+        y: 226
         width: 11
         height: 12
       alignment: 7
@@ -189,7 +189,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 7
-        y: 15
+        y: 143
         width: 37
         height: 74
       alignment: 0
@@ -210,7 +210,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 124
-        y: 78
+        y: 206
         width: 3
         height: 14
       alignment: 7
@@ -231,7 +231,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 98
-        y: 83
+        y: 211
         width: 12
         height: 11
       alignment: 7
@@ -252,7 +252,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 111
-        y: 84
+        y: 212
         width: 6
         height: 9
       alignment: 7
@@ -273,7 +273,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 116
-        y: 73
+        y: 201
         width: 7
         height: 10
       alignment: 7
@@ -294,7 +294,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 118
-        y: 84
+        y: 212
         width: 5
         height: 8
       alignment: 7
@@ -315,7 +315,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 103
-        y: 73
+        y: 201
         width: 12
         height: 10
       alignment: 7
@@ -336,7 +336,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 109
-        y: 65
+        y: 193
         width: 8
         height: 7
       alignment: 7
@@ -357,7 +357,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 118
-        y: 62
+        y: 190
         width: 9
         height: 10
       alignment: 7
@@ -369,6 +369,363 @@ TextureImporter:
       bones: []
       spriteID: c339507991a38a4499f4a69968cd5a0c
       internalID: -1362956818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 173
+        width: 8
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a2d91f894c58f4ba23f33a1b51469e
+      internalID: 307316581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_14
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 162
+        width: 14
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4646a9a0493cc44d8cde4496747854a
+      internalID: 576788957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_15
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 177
+        width: 21
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49ed5fd170dbff42854a3c7324e4343
+      internalID: 337378796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_16
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 187
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5365331824032664db656dfa0c230f2c
+      internalID: -726971358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_17
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 177
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6dca5e04b879ed4c83b71e77531bc80
+      internalID: -33271427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_18
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 177
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c47f95e4e2682a449bfe9a83ac19ca4
+      internalID: 2138231832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_19
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 139
+        width: 42
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3c98411ddf6c942b1f799aca075c3e
+      internalID: 54183873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_20
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 141
+        width: 10
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a0bfee487d2564bbc4e696c3347881
+      internalID: -71649203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_21
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 109
+        width: 26
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e8ca5c8e5d0b645b380edc86f93db5
+      internalID: -142516490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 125
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f14433eef7c6948b069d26bd250971
+      internalID: -1427004396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_23
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 132
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84632d1421e143c42a83ca43722a09fb
+      internalID: -1867634761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_24
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 120
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9370ada616ff043a420781bec3c764
+      internalID: 264015793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_25
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 109
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a320e52315b5e564abbe1d7d6db5f4c2
+      internalID: -1422049521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_26
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 113
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708bfb0d687d67042a15db9ee81a2f15
+      internalID: 1501127121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_27
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 166
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45474dbf2e9a0984eaa946985bf71d0a
+      internalID: 1801277557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_28
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 156
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fe9f85524c0014b9932c23fbff7234
+      internalID: 636859053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_29
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 108
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8f3abb6efc686449329aad181b4668
+      internalID: -1853126963
       vertices: []
       indices: 
       edges: []
@@ -385,11 +742,28 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       houseFurniture_0: -6787668358164919625
+      houseFurniture_1: -731481842
       houseFurniture_10: 598519333
       houseFurniture_11: 319027274
       houseFurniture_12: -1362956818
       houseFurniture_13: 4180072266024067503
+      houseFurniture_14: 307316581
+      houseFurniture_15: 576788957
+      houseFurniture_16: 337378796
+      houseFurniture_17: -726971358
+      houseFurniture_18: -33271427
+      houseFurniture_19: 2138231832
       houseFurniture_2: 269305852
+      houseFurniture_20: 54183873
+      houseFurniture_21: -71649203
+      houseFurniture_22: -1427004396
+      houseFurniture_23: -1867634761
+      houseFurniture_24: 264015793
+      houseFurniture_25: -1422049521
+      houseFurniture_26: 1501127121
+      houseFurniture_27: 1801277557
+      houseFurniture_28: 636859053
+      houseFurniture_29: -1853126963
       houseFurniture_3: -808089076
       houseFurniture_4: -1344786424
       houseFurniture_5: -1059274863

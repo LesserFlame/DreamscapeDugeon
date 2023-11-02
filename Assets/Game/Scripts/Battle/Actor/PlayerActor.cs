@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerActor : BattleActor
 {
+    [HideInInspector] public bool initialized = false;
     public Transform spellTransform;
     private void Start()
     {
@@ -24,5 +25,31 @@ public class PlayerActor : BattleActor
     public override void OnDecide()
     {
         //nothing
+    }
+
+    public void OnInitialize(PlayerController player)
+    {
+        if (!initialized) 
+        { 
+            HP = player.data.HP;
+            maxHP = player.data.HP;
+            MP = player.data.MP;
+            maxMP = player.data.MP;
+            speed = player.data.SP;
+            baseATK = player.data.ATK;
+            baseDEF = player.data.DEF;
+
+            initialized = true;
+        }
+    }
+    public void OnUpdateStats(PlayerController player)
+    {
+        HP += player.data.HP - maxHP;
+        maxHP = player.data.HP;
+        MP += player.data.MP - maxMP;
+        maxMP = player.data.MP;
+        speed = player.data.SP;
+        baseATK = player.data.ATK;
+        baseDEF = player.data.DEF;
     }
 }

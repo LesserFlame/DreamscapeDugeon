@@ -26,8 +26,9 @@ public abstract class BattleActor : MonoBehaviour
 
     public virtual void OnTakeDamage(float baseDamgage)
     {
-        float trueDamage = baseDamgage - baseDEF;
-        if (trueDamage < 0) { trueDamage = 0; }
+        float trueDamage = baseDamgage / baseDEF * 0.5f + 2;
+        //Debug.Log(trueDamage);
+        if (trueDamage <= 0) { trueDamage = 1; }
         HP -= trueDamage;
     }
 

@@ -8,6 +8,7 @@ public class EnemyActor : BattleActor
     // Start is called before the first frame update
     private Animator animator;
     private BattleAction action;
+    public int rewardXP;
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -30,6 +31,7 @@ public class EnemyActor : BattleActor
         baseATK = data.baseATK;
         baseDEF = data.baseDEF;
         speed = data.speed;
+        rewardXP = data.rewardXP;
 
         animator = data.animator;
         actions = data.actions;
@@ -45,6 +47,7 @@ public class EnemyActor : BattleActor
         base.OnDeath();
         BattleManager.Instance.activeEnemies.Remove(this);
         BattleManager.Instance.OnEnemyDeath();
+        GameManager.Instance.player.IncreaseXP(rewardXP);
     }
 
     public override void OnDecide()
