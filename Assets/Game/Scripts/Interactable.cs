@@ -7,6 +7,13 @@ public class Interactable : MonoBehaviour
 {
     public virtual void OnInteract()
     {
-        Debug.Log("interact");
+        if(TryGetComponent<DialogueTrigger>(out DialogueTrigger trigger))
+        {
+            Invoke("OnTriggerDialogue", 0.1f);
+        }
+    }
+    public void OnTriggerDialogue()
+    {
+        if (TryGetComponent<DialogueTrigger>(out DialogueTrigger trigger)) trigger.TriggerDialogue();
     }
 }

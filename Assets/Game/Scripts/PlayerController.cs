@@ -7,7 +7,8 @@ using UnityEngine.Animations;
 public class PlayerController : MonoBehaviour
 {
     public Transform interactor;
-
+    public float overlapRadius = 0.1f;
+    public bool detectInput = true;
     public bool loadStats = false;
     public float speed = 1f;
     public float sprintSpeed = 2f;
@@ -53,81 +54,90 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (detectInput)
         {
-            Collider2D collider = Physics2D.OverlapCircle(interactor.position, 0.1f);
-            if (collider != null)
+            if (Input.GetKeyDown(KeyCode.Z))
             {
-                Debug.Log("Collided with " + collider.name);
-                var interactable = collider.GetComponent<Interactable>();
-                if (interactable != null) { interactable.OnInteract(); }
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(interactor.position, overlapRadius);
+                if (colliders != null)
+                {
+                    foreach (var collider in colliders)
+                    {
+                        var interactable = collider.GetComponent<Interactable>();
+                        if (interactable != null) { interactable.OnInteract(); break; }
+                    }
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.X)) 
-        {
-            SaveSystem.DeletePlayer();
-            LoadStats();
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                SaveSystem.DeletePlayer();
+                LoadStats();
+            }
         }
     }
     private void FixedUpdate()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-
-        if (x != 0f && y == 0)
+        if (detectInput)
         {
-            animator.Play("Right");
-            sprite.flipX = x < 0;
-            if (sprite.flipX) directionId = 3; else directionId = 1;
-        }
-        else if (y != 0f)
-        {
-            animator.Play(y > 0 ? "Up" : "Down");
-            if (y > 0) directionId = 2; else directionId = 0;
-        }
 
-        Vector2 direction = new Vector2(x, y);
+            float x = Input.GetAxis("Horizontal");
+            float y = Input.GetAxis("Vertical");
 
-        //all directions go at the same speed
-        direction.Normalize();
+            if (x != 0f && y == 0)
+            {
+                animator.Play("Right");
+                sprite.flipX = x < 0;
+                if (sprite.flipX) directionId = 3; else directionId = 1;
+            }
+            else if (y != 0f)
+            {
+                animator.Play(y > 0 ? "Up" : "Down");
+                if (y > 0) directionId = 2; else directionId = 0;
+            }
 
-        isSprinting = Input.GetKey(KeyCode.LeftShift);
-        rb.velocity = direction * (isSprinting ? sprintSpeed : speed);
+            Vector2 direction = new Vector2(x, y);
 
-        if (direction.magnitude != 0) 
-        { 
-            animator.speed = (isSprinting ? sprintAnimSpeed : animSpeed);
-            isMoving = true;
-            //lastClip = GetCurrentClipName();
-        }
-        else 
-        { 
-            animator.speed = 0;
-            isMoving = false;
-            //animator.Play(lastClip);
-            Invoke("ResetAnimation", 0.5f);
-        }
-        animator.SetBool("IsMoving", isMoving);
+            //all directions go at the same speed
+            direction.Normalize();
 
-        //player interactions
-        switch(directionId)
-        {
-            case 0:
-                //down
-                interactor.localPosition = new Vector3(0, -0.3f); //+ transform.position;
-                break;
-            case 1:
-                //right
-                interactor.localPosition = new Vector3(0.5f, 0.2f); //+ transform.position;
-                break;
-            case 2:
-                //up
-                interactor.localPosition = new Vector3(0, 0.7f); //+ transform.position;
-                break;
-            case 3:
-                //left
-                interactor.localPosition = new Vector3(-0.5f, 0.2f); //+ transform.position;
-                break;
+            isSprinting = Input.GetKey(KeyCode.LeftShift);
+            rb.velocity = direction * (isSprinting ? sprintSpeed : speed);
+
+            if (direction.magnitude != 0)
+            {
+                animator.speed = (isSprinting ? sprintAnimSpeed : animSpeed);
+                isMoving = true;
+                //lastClip = GetCurrentClipName();
+            }
+            else
+            {
+                animator.speed = 0;
+                isMoving = false;
+                //animator.Play(lastClip);
+                Invoke("ResetAnimation", 0.5f);
+            }
+            animator.SetBool("IsMoving", isMoving);
+
+            //player interactions
+            switch (directionId)
+            {
+                case 0:
+                    //down
+                    interactor.localPosition = new Vector3(0, -0.3f); //+ transform.position;
+                    break;
+                case 1:
+                    //right
+                    interactor.localPosition = new Vector3(0.5f, 0.2f); //+ transform.position;
+                    break;
+                case 2:
+                    //up
+                    interactor.localPosition = new Vector3(0, 0.7f); //+ transform.position;
+                    break;
+                case 3:
+                    //left
+                    interactor.localPosition = new Vector3(-0.5f, 0.2f); //+ transform.position;
+                    break;
+            }
         }
     }
 
@@ -186,7 +196,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(interactor.position, 0.1f);
+        Gizmos.DrawWireSphere(interactor.position, overlapRadius);
     }
 
     private void LoadStats()

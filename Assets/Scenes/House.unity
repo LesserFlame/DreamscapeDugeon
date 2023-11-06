@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 139636241}
   - component: {fileID: 139636240}
   - component: {fileID: 139636239}
+  - component: {fileID: 139636244}
+  - component: {fileID: 139636243}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -265,6 +267,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480238779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &139636243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139636238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489e7d2ae26c14792c3d248ee8b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Emberlynn
+    sentences:
+    - I love this seat so much! It is easy for me to fall asleep in if I am not careful.
+    - That's what beds are for hehehe.
+--- !u!114 &139636244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139636238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &171540978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1752,8 @@ GameObject:
   - component: {fileID: 425960038}
   - component: {fileID: 425960037}
   - component: {fileID: 425960036}
+  - component: {fileID: 425960040}
+  - component: {fileID: 425960041}
   m_Layer: 0
   m_Name: Wardrobe
   m_TagString: Untagged
@@ -1854,6 +1887,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480238779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425960040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425960035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489e7d2ae26c14792c3d248ee8b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Emberlynn
+    sentences:
+    - I keep all of my clothes here.
+--- !u!114 &425960041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425960035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &432429980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,6 +2283,8 @@ GameObject:
   - component: {fileID: 524570028}
   - component: {fileID: 524570027}
   - component: {fileID: 524570026}
+  - component: {fileID: 524570030}
+  - component: {fileID: 524570031}
   m_Layer: 0
   m_Name: Easel
   m_TagString: Untagged
@@ -2345,6 +2408,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480238779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &524570030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524570025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489e7d2ae26c14792c3d248ee8b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Emberlynn
+    sentences:
+    - I get bored here sometimes.
+    - I don't really have much to do in the woods without internet.
+--- !u!114 &524570031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524570025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &536351024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2423,11 +2515,11 @@ Transform:
   m_GameObject: {fileID: 536351024}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.930975, y: -0.03132528, z: 0.22113669}
+  m_LocalPosition: {x: -0.1800251, y: -0.19132528, z: 0.22113669}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1480238779}
+  m_Father: {fileID: 1553699490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &562047297
 GameObject:
@@ -2730,6 +2822,8 @@ GameObject:
   m_Component:
   - component: {fileID: 633352248}
   - component: {fileID: 633352247}
+  - component: {fileID: 633352249}
+  - component: {fileID: 633352250}
   m_Layer: 7
   m_Name: Books
   m_TagString: Untagged
@@ -2771,7 +2865,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.31}
+  m_Offset: {x: 0, y: 0.46}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2807,6 +2901,34 @@ Transform:
   - {fileID: 391641812}
   m_Father: {fileID: 1480238779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &633352249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633352246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489e7d2ae26c14792c3d248ee8b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Emberlynn
+    sentences:
+    - I should probably get a bookshelf for my books...
+--- !u!114 &633352250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633352246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &740020449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,6 +3086,8 @@ GameObject:
   - component: {fileID: 753621400}
   - component: {fileID: 753621399}
   - component: {fileID: 753621398}
+  - component: {fileID: 753621402}
+  - component: {fileID: 753621403}
   m_Layer: 0
   m_Name: Oven
   m_TagString: Untagged
@@ -3097,6 +3221,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480238779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753621402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753621397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489e7d2ae26c14792c3d248ee8b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Emberlynn
+    sentences:
+    - A simple wood stove, it keeps the house warm in the winter.
+--- !u!114 &753621403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753621397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &762928916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,6 +3259,9 @@ GameObject:
   m_Component:
   - component: {fileID: 762928920}
   - component: {fileID: 762928919}
+  - component: {fileID: 762928921}
+  - component: {fileID: 762928923}
+  - component: {fileID: 762928922}
   m_Layer: 0
   m_Name: FlowerPot
   m_TagString: Untagged
@@ -3181,6 +3336,82 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480238779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &762928921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762928916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489e7d2ae26c14792c3d248ee8b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Emberlynn
+    sentences:
+    - It's a golden flower!
+    - I'm surprised it hasn't tried killing me yet.
+    - I need to water it more before anything like that happens...
+--- !u!61 &762928922
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762928916}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.234375}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.25, y: 0.46875}
+    newSize: {x: 0.25, y: 0.46875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.25, y: 0.46875}
+  m_EdgeRadius: 0
+--- !u!114 &762928923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762928916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &781363508
 GameObject:
   m_ObjectHideFlags: 0
@@ -3488,11 +3719,11 @@ Transform:
   m_GameObject: {fileID: 805517689}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.910975, y: 0.4336747, z: 0.22113669}
+  m_LocalPosition: {x: -0.20002508, y: 0.2736747, z: 0.22113669}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1480238779}
+  m_Father: {fileID: 1553699490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &855313363
 GameObject:
@@ -4022,7 +4253,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 1801277557, guid: 2a5448febc73336448bfbfd939a301b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4351,6 +4582,8 @@ GameObject:
   - component: {fileID: 1391039022}
   - component: {fileID: 1391039024}
   - component: {fileID: 1391039025}
+  - component: {fileID: 1391039026}
+  - component: {fileID: 1391039027}
   m_Layer: 0
   m_Name: HatStand
   m_TagString: Untagged
@@ -4484,6 +4717,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 1
+--- !u!114 &1391039026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391039021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489e7d2ae26c14792c3d248ee8b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Emberlynn
+    sentences:
+    - This is where I keep my hat and cloak!
+    - I like the way they feel when I wear them.
+--- !u!114 &1391039027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391039021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1412642011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4507,6 +4769,10 @@ PrefabInstance:
     - target: {fileID: 3793878178179857800, guid: ec7735fdf1db0864780684134fac44b1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.09375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312013938663717976, guid: ec7735fdf1db0864780684134fac44b1, type: 3}
+      propertyPath: overlapRadius
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5833613843594219517, guid: ec7735fdf1db0864780684134fac44b1, type: 3}
       propertyPath: m_Sprite
@@ -4550,7 +4816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982454615248749613, guid: ec7735fdf1db0864780684134fac44b1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7436589350777966441, guid: ec7735fdf1db0864780684134fac44b1, type: 3}
       propertyPath: m_Sprite
@@ -4630,7 +4896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067149245965592173, guid: ec7735fdf1db0864780684134fac44b1, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.08902439
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9067149245965592173, guid: ec7735fdf1db0864780684134fac44b1, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
@@ -4638,11 +4904,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067149245965592173, guid: ec7735fdf1db0864780684134fac44b1, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.82113826
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9067149245965592173, guid: ec7735fdf1db0864780684134fac44b1, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9993404
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4781,9 +5047,7 @@ Transform:
   - {fileID: 601350061}
   - {fileID: 935760472}
   - {fileID: 762928920}
-  - {fileID: 805517691}
-  - {fileID: 1912366218}
-  - {fileID: 536351026}
+  - {fileID: 1553699490}
   - {fileID: 524570029}
   - {fileID: 1578362293}
   - {fileID: 1146354140}
@@ -5147,6 +5411,118 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1553699489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1553699490}
+  - component: {fileID: 1553699493}
+  - component: {fileID: 1553699492}
+  - component: {fileID: 1553699491}
+  m_Layer: 0
+  m_Name: Pictures
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1553699490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553699489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.111, y: 0.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 805517691}
+  - {fileID: 1912366218}
+  - {fileID: 536351026}
+  m_Father: {fileID: 1480238779}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1553699491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553699489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489e7d2ae26c14792c3d248ee8b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Emberlynn
+    sentences:
+    - These are some of my proudest works!
+    - I'm not very good at painting but I enjoy making something to put on my wall.
+--- !u!114 &1553699492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553699489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1553699493
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553699489}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.85, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1567694034
 GameObject:
   m_ObjectHideFlags: 0
@@ -5292,6 +5668,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480238779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1575807429
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331737389233099034, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778274568083218985, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_Name
+      value: DialogueManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778274568083218985, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5336031b04cdf664ba4199466245faa5, type: 3}
 --- !u!1 &1578362291
 GameObject:
   m_ObjectHideFlags: 0
@@ -7408,11 +7845,11 @@ Transform:
   m_GameObject: {fileID: 1912366216}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.330975, y: 0.17086875, z: 0.22113669}
+  m_LocalPosition: {x: 0.219975, y: 0.010868758, z: 0.22113669}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1480238779}
+  m_Father: {fileID: 1553699490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2000647168
 GameObject:
@@ -7509,6 +7946,9 @@ GameObject:
   - component: {fileID: 2040552132}
   - component: {fileID: 2040552131}
   - component: {fileID: 2040552133}
+  - component: {fileID: 2040552136}
+  - component: {fileID: 2040552135}
+  - component: {fileID: 2040552134}
   m_Layer: 0
   m_Name: Pillow
   m_TagString: Untagged
@@ -7596,6 +8036,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 1
+--- !u!114 &2040552134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040552130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489e7d2ae26c14792c3d248ee8b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Emberlynn
+    sentences:
+    - A fallen soldier in the aftermath of a intense battle.
+    - 'I''ll put the pillow back on the bed later. '
+--- !u!114 &2040552135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040552130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &2040552136
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040552130}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.1875}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.34375, y: 0.375}
+    newSize: {x: 0.34375, y: 0.375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.34375, y: 0.375}
+  m_EdgeRadius: 0
 --- !u!1 &2140529404
 GameObject:
   m_ObjectHideFlags: 0
@@ -7688,3 +8203,4 @@ SceneRoots:
   - {fileID: 562047299}
   - {fileID: 1691312522}
   - {fileID: 1480238779}
+  - {fileID: 1575807429}

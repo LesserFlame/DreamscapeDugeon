@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6a27654e1337c1418bd39e5242559c1, type: 3}
-  m_Name: EnemyData_Scrungloid 1
+  m_Name: EnemyData_Skull
   m_EditorClassIdentifier: 
-  enemyName: Scrungloid
+  enemyName: Haunted Skull
   maxHP: 10
-  baseDEF: 4
-  baseATK: 5
-  animator: {fileID: 9100000, guid: f02303ba1a2d0e8428e44ab86aeb0d84, type: 2}
+  baseDEF: 2
+  baseATK: 4
+  speed: 1
+  rewardXP: 75
+  animator: {fileID: 9100000, guid: 10ec6376cd83d964c9d9f27b75de4447, type: 2}
+  actions:
+  - {fileID: 11400000, guid: 7606ede7f5d3f9242baf61d4692aaf6e, type: 2}

@@ -33,7 +33,7 @@ public class EnemyActor : BattleActor
         speed = data.speed;
         rewardXP = data.rewardXP;
 
-        animator = data.animator;
+        animator.runtimeAnimatorController = data.animator;
         actions = data.actions;
     }
     public override void OnTakeDamage(float damage)
