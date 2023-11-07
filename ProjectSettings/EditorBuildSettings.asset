@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/House.unity
     guid: 207f999020663034e82b958137ef6b87
   - enabled: 1
-    path: Assets/Scenes/ProceduralTest.unity
+    path: Assets/Scenes/Dungeon.unity
     guid: d45327196c16ec345a41607f9028aaf9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

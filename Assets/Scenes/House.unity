@@ -282,8 +282,9 @@ MonoBehaviour:
   dialogue:
     name: Emberlynn
     sentences:
-    - I love this seat so much! It is easy for me to fall asleep in if I am not careful.
-    - That's what beds are for hehehe.
+    - This chair is perfect for my cozy reading nook! It's cute and comfy too.
+    - It's mine, so if anyone messes with it they'll feel the fire of my fury! I
+      shall be a true guardian of comfort! Mweheheh
 --- !u!114 &139636244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1902,7 +1903,11 @@ MonoBehaviour:
   dialogue:
     name: Emberlynn
     sentences:
-    - I keep all of my clothes here.
+    - Wow, my wardrobe is starting to look like a cartoon character's closet with
+      all the same colored clothes.
+    - Maybe I should add some more variety to my fashion choices. But hey, who can
+      resist these fabulous colors, right?
+    - ...Right?
 --- !u!114 &425960041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2423,8 +2428,8 @@ MonoBehaviour:
   dialogue:
     name: Emberlynn
     sentences:
-    - I get bored here sometimes.
-    - I don't really have much to do in the woods without internet.
+    - Ah, my trusty easel! Not exactly a masterpiece factory, but it's a great boredom-buster.
+    - Who needs the internet when you can create your own... interesting art?
 --- !u!114 &524570031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2865,7 +2870,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.46}
+  m_Offset: {x: -0.15, y: 0.46}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2875,7 +2880,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.91, y: 0.44}
+  m_Size: {x: 0.6, y: 0.44}
   m_EdgeRadius: 0
 --- !u!4 &633352248
 Transform:
@@ -2916,7 +2921,10 @@ MonoBehaviour:
   dialogue:
     name: Emberlynn
     sentences:
-    - I should probably get a bookshelf for my books...
+    - 'These books are piling up like they''re planning a revolt! '
+    - 'Maybe I should get a bookshelf and give them a proper home before they start
+      plotting a literary uprising. '
+    - Watch out, bookshelf, you're next on my to-do list!
 --- !u!114 &633352250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2929,6 +2937,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20ea0630d14d81408945b558606419f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &734999418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 734999421}
+  - component: {fileID: 734999420}
+  - component: {fileID: 734999419}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &734999419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734999418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c2e8acc209d314088700ad1adc5d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: TitleScreen
+--- !u!61 &734999420
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734999418}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &734999421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734999418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 1.82, z: 1.4442278}
+  m_LocalScale: {x: 1, y: 0.2625, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &740020449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,7 +3336,10 @@ MonoBehaviour:
   dialogue:
     name: Emberlynn
     sentences:
-    - A simple wood stove, it keeps the house warm in the winter.
+    - This wood stove is a real lifesaver in the winter!
+    - 'It may not be as magical as a fire-breathing dragon, but it sure keeps the
+      house cozy and warm. '
+    - A hot cup of cocoa by the stove, and I'm all set for a chilly day.
 --- !u!114 &753621403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3351,9 +3454,10 @@ MonoBehaviour:
   dialogue:
     name: Emberlynn
     sentences:
-    - It's a golden flower!
-    - I'm surprised it hasn't tried killing me yet.
-    - I need to water it more before anything like that happens...
+    - Hey there, my little sunshine!
+    - I hope you're not planning any sneak attacks on me if I forget to water you.
+    - I promise to take good care of you, just don't turn into a vengeful plant,
+      okay?
 --- !u!61 &762928922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4112,6 +4216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c2e8acc209d314088700ad1adc5d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Dungeon
 --- !u!1 &1066088407
 GameObject:
   m_ObjectHideFlags: 0
@@ -4732,8 +4837,10 @@ MonoBehaviour:
   dialogue:
     name: Emberlynn
     sentences:
-    - This is where I keep my hat and cloak!
-    - I like the way they feel when I wear them.
+    - 'My trusty coat rack, home to my most essential gear! '
+    - The purple wizard hat for that mystical flair and the dark cloak for a touch
+      of drama.
+    - Ooh la la! Don't I look so be-witching in such an outfit? Heeheehee
 --- !u!114 &1391039027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5463,8 +5570,8 @@ MonoBehaviour:
   dialogue:
     name: Emberlynn
     sentences:
-    - These are some of my proudest works!
-    - I'm not very good at painting but I enjoy making something to put on my wall.
+    - 'My little gallery of ''works of art,'' or at least that''s what I call them. '
+    - They might not win any awards, but I had a blast making them.
 --- !u!114 &1553699492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8051,8 +8158,8 @@ MonoBehaviour:
   dialogue:
     name: Emberlynn
     sentences:
-    - A fallen soldier in the aftermath of a intense battle.
-    - 'I''ll put the pillow back on the bed later. '
+    - Oh, looks like a fallen soldier in the aftermath of an intense battle...
+    - Don't worry, little pillow, I'll put you back in the ranks later. Duty calls!
 --- !u!114 &2040552135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8204,3 +8311,4 @@ SceneRoots:
   - {fileID: 1691312522}
   - {fileID: 1480238779}
   - {fileID: 1575807429}
+  - {fileID: 734999421}

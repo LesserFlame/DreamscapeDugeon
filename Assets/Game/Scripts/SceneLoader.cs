@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Bed : Interactable
+public class SceneLoader : Interactable
 {
+    public string sceneName;
     public override void OnInteract()
     {
         base.OnInteract();
-        SceneManager.LoadScene("ProceduralTest");
+        SceneManager.LoadScene(sceneName);
     }
 }
