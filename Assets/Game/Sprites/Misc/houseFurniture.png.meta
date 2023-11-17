@@ -676,7 +676,7 @@ TextureImporter:
         width: 6
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -697,7 +697,7 @@ TextureImporter:
         width: 7
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -717,8 +717,8 @@ TextureImporter:
         y: 108
         width: 14
         height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -726,6 +726,48 @@ TextureImporter:
       bones: []
       spriteID: 6a8f3abb6efc686449329aad181b4668
       internalID: -1853126963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_30
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 91
+        width: 25
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9964e965494f5943abbea3f45e8e4f6
+      internalID: 1895917289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houseFurniture_31
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 97
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aaa2afadd4de5b449060380ec326bc1
+      internalID: -608444377
       vertices: []
       indices: 
       edges: []
@@ -765,6 +807,8 @@ TextureImporter:
       houseFurniture_28: 636859053
       houseFurniture_29: -1853126963
       houseFurniture_3: -808089076
+      houseFurniture_30: 1895917289
+      houseFurniture_31: -608444377
       houseFurniture_4: -1344786424
       houseFurniture_5: -1059274863
       houseFurniture_6: -1315558363

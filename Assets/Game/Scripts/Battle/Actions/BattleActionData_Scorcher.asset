@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e2028889b92214795761105841b320, type: 3}
+  m_Name: BattleActionData_Scorcher
+  m_EditorClassIdentifier: 
+  actionName: Scorcher
+  damage: 50
+  manaCost: 30
+  effect: {fileID: 1575358193044741854, guid: 549c90865a853204d95f05ed4f9170aa, type: 3}
+  category: 2

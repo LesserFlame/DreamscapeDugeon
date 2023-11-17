@@ -1,0 +1,1126 @@
+fileFormatVersion: 2
+guid: 912594fe017403849a9e63c0ca6a1d30
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1232575495446565857
+    second: Flamethrower4_497x249_0
+  - first:
+      213: 5922764115918628203
+    second: Flamethrower4_497x249_1
+  - first:
+      213: -2321384796310846095
+    second: Flamethrower4_497x249_2
+  - first:
+      213: 3561435318550158026
+    second: Flamethrower4_497x249_3
+  - first:
+      213: -7242759278338233101
+    second: Flamethrower4_497x249_4
+  - first:
+      213: 1428147631902620790
+    second: Flamethrower4_497x249_5
+  - first:
+      213: -9180881679911155076
+    second: Flamethrower4_497x249_6
+  - first:
+      213: 5437341335934790532
+    second: Flamethrower4_497x249_7
+  - first:
+      213: 134567124939309960
+    second: Flamethrower4_497x249_8
+  - first:
+      213: -2207671312611075794
+    second: Flamethrower4_497x249_9
+  - first:
+      213: -4053587883606432840
+    second: Flamethrower4_497x249_10
+  - first:
+      213: 1903372146392792455
+    second: Flamethrower4_497x249_11
+  - first:
+      213: -6459220408166462164
+    second: Flamethrower4_497x249_12
+  - first:
+      213: -230377291877483589
+    second: Flamethrower4_497x249_13
+  - first:
+      213: 5304868504168569678
+    second: Flamethrower4_497x249_14
+  - first:
+      213: -1251226237969451628
+    second: Flamethrower4_497x249_15
+  - first:
+      213: -7691562151178256062
+    second: Flamethrower4_497x249_16
+  - first:
+      213: 3222458613410501265
+    second: Flamethrower4_497x249_17
+  - first:
+      213: -1474398778930963159
+    second: Flamethrower4_497x249_18
+  - first:
+      213: -8644043353380345667
+    second: Flamethrower4_497x249_19
+  - first:
+      213: 3775073959460074673
+    second: Flamethrower4_497x249_20
+  - first:
+      213: 853220886767031182
+    second: Flamethrower4_497x249_21
+  - first:
+      213: 7724039842356911289
+    second: Flamethrower4_497x249_22
+  - first:
+      213: 7748423142928869505
+    second: Flamethrower4_497x249_23
+  - first:
+      213: 3171345131940595054
+    second: Flamethrower4_497x249_24
+  - first:
+      213: -162471053588820164
+    second: Flamethrower4_497x249_25
+  - first:
+      213: 7975215486363673504
+    second: Flamethrower4_497x249_26
+  - first:
+      213: -4713083378367372522
+    second: Flamethrower4_497x249_27
+  - first:
+      213: 1044257817771905519
+    second: Flamethrower4_497x249_28
+  - first:
+      213: -7053219643220989693
+    second: Flamethrower4_497x249_29
+  - first:
+      213: 4898852924861264023
+    second: Flamethrower4_497x249_30
+  - first:
+      213: -8112333484501776233
+    second: Flamethrower4_497x249_31
+  - first:
+      213: -6405802046205683619
+    second: Flamethrower4_497x249_32
+  - first:
+      213: 5292675364438856689
+    second: Flamethrower4_497x249_33
+  - first:
+      213: 3943480258323665102
+    second: Flamethrower4_497x249_34
+  - first:
+      213: 81402537140428360
+    second: Flamethrower4_497x249_35
+  - first:
+      213: -7475349544189821595
+    second: Flamethrower4_497x249_36
+  - first:
+      213: 2622339039680812177
+    second: Flamethrower4_497x249_37
+  - first:
+      213: 4910279707772464529
+    second: Flamethrower4_497x249_38
+  - first:
+      213: -8258242593147362996
+    second: Flamethrower4_497x249_39
+  - first:
+      213: 9127101050114454866
+    second: Flamethrower4_497x249_40
+  - first:
+      213: -3115493149026015778
+    second: Flamethrower4_497x249_41
+  - first:
+      213: -4073286765028882415
+    second: Flamethrower4_497x249_42
+  - first:
+      213: -4824218978764640283
+    second: Flamethrower4_497x249_43
+  - first:
+      213: 8592740795028008092
+    second: Flamethrower4_497x249_44
+  - first:
+      213: 8557831907762872208
+    second: Flamethrower4_497x249_45
+  - first:
+      213: 7224934317624746311
+    second: Flamethrower4_497x249_46
+  - first:
+      213: -7950463436965815056
+    second: Flamethrower4_497x249_47
+  - first:
+      213: 7162770127795138968
+    second: Flamethrower4_497x249_48
+  - first:
+      213: 7863006710465986338
+    second: Flamethrower4_497x249_49
+  - first:
+      213: -3922929466205368826
+    second: Flamethrower4_497x249_50
+  - first:
+      213: -3285199461456364569
+    second: Flamethrower4_497x249_51
+  - first:
+      213: -760108327167063516
+    second: Flamethrower4_497x249_52
+  - first:
+      213: 3367411627087907553
+    second: Flamethrower4_497x249_53
+  - first:
+      213: -870055123294956758
+    second: Flamethrower4_497x249_54
+  - first:
+      213: 5608117273831213489
+    second: Flamethrower4_497x249_55
+  - first:
+      213: 4167631126922092701
+    second: Flamethrower4_497x249_56
+  - first:
+      213: 1838685048390360684
+    second: Flamethrower4_497x249_57
+  - first:
+      213: 4316069460871625971
+    second: Flamethrower4_497x249_58
+  - first:
+      213: 441623250654756835
+    second: Flamethrower4_497x249_59
+  - first:
+      213: 3702529083571087179
+    second: Flamethrower4_497x249_60
+  - first:
+      213: 186940785392619205
+    second: Flamethrower4_497x249_61
+  - first:
+      213: -5268845044515559546
+    second: Flamethrower4_497x249_62
+  - first:
+      213: -3312925463936466376
+    second: Flamethrower4_497x249_63
+  - first:
+      213: 2948965494849385045
+    second: Flamethrower4_497x249_64
+  - first:
+      213: 5202341663397612386
+    second: Flamethrower4_497x249_65
+  - first:
+      213: -6092661214802224587
+    second: Flamethrower4_497x249_66
+  - first:
+      213: 7126649920253639100
+    second: Flamethrower4_497x249_67
+  - first:
+      213: 3522485345257132217
+    second: Flamethrower4_497x249_68
+  - first:
+      213: -5752738252715734886
+    second: Flamethrower4_497x249_69
+  - first:
+      213: 4546058472331300619
+    second: Flamethrower4_497x249_70
+  - first:
+      213: -5990330167594944986
+    second: Flamethrower4_497x249_71
+  - first:
+      213: -431855919638026538
+    second: Flamethrower4_497x249_72
+  - first:
+      213: 8218525420827307845
+    second: Flamethrower4_497x249_73
+  - first:
+      213: 4948000761997525458
+    second: Flamethrower4_497x249_74
+  - first:
+      213: -3986132016655352579
+    second: Flamethrower4_497x249_75
+  - first:
+      213: -6996108644280635815
+    second: Flamethrower4_497x249_76
+  - first:
+      213: 6591721530591342284
+    second: Flamethrower4_497x249_77
+  - first:
+      213: -1137723873760306433
+    second: Flamethrower4_497x249_78
+  - first:
+      213: 6154729215990042437
+    second: Flamethrower4_497x249_79
+  - first:
+      213: 7446906611888068118
+    second: Flamethrower4_497x249_80
+  - first:
+      213: 6061975769339291174
+    second: Flamethrower4_497x249_81
+  - first:
+      213: -8436603780771132470
+    second: Flamethrower4_497x249_82
+  - first:
+      213: -5436602283346726794
+    second: Flamethrower4_497x249_83
+  - first:
+      213: -8559580357134635437
+    second: Flamethrower4_497x249_84
+  - first:
+      213: 7903061001253034881
+    second: Flamethrower4_497x249_85
+  - first:
+      213: 5053222671954123343
+    second: Flamethrower4_497x249_86
+  - first:
+      213: 2387428614856350827
+    second: Flamethrower4_497x249_87
+  - first:
+      213: 5269238935294894544
+    second: Flamethrower4_497x249_88
+  - first:
+      213: -4629693998623891551
+    second: Flamethrower4_497x249_89
+  - first:
+      213: 5884945651624554613
+    second: Flamethrower4_497x249_90
+  - first:
+      213: 5354415014652914048
+    second: Flamethrower4_497x249_91
+  - first:
+      213: -2617768676216437403
+    second: Flamethrower4_497x249_92
+  - first:
+      213: 4057968733995573295
+    second: Flamethrower4_497x249_93
+  - first:
+      213: -6968967057624529264
+    second: Flamethrower4_497x249_94
+  - first:
+      213: -444581921925104500
+    second: Flamethrower4_497x249_95
+  - first:
+      213: -8750885160839226589
+    second: Flamethrower4_497x249_96
+  - first:
+      213: -2611147332447421595
+    second: Flamethrower4_497x249_97
+  - first:
+      213: -4910380009505832823
+    second: Flamethrower4_497x249_98
+  - first:
+      213: -2358788422604315424
+    second: Flamethrower4_497x249_99
+  - first:
+      213: 2043299893192782991
+    second: Flamethrower4_497x249_100
+  - first:
+      213: 248503191232173478
+    second: Flamethrower4_497x249_101
+  - first:
+      213: -7112272411732931038
+    second: Flamethrower4_497x249_102
+  - first:
+      213: -8884760815330685653
+    second: Flamethrower4_497x249_103
+  - first:
+      213: -7449722100330787154
+    second: Flamethrower4_497x249_104
+  - first:
+      213: 6110684323897019194
+    second: Flamethrower4_497x249_105
+  - first:
+      213: 7595000983762456752
+    second: Flamethrower4_497x249_106
+  - first:
+      213: -1593005020245335865
+    second: Flamethrower4_497x249_107
+  - first:
+      213: -5628350866802242893
+    second: Flamethrower4_497x249_108
+  - first:
+      213: 6709160042628730003
+    second: Flamethrower4_497x249_109
+  - first:
+      213: 4541170291859272730
+    second: Flamethrower4_497x249_110
+  - first:
+      213: 4370684868728639638
+    second: Flamethrower4_497x249_111
+  - first:
+      213: -3632620847956117987
+    second: Flamethrower4_497x249_112
+  - first:
+      213: 7466011767289816234
+    second: Flamethrower4_497x249_113
+  - first:
+      213: 1200937337314791541
+    second: Flamethrower4_497x249_114
+  - first:
+      213: 839862426109060930
+    second: Flamethrower4_497x249_115
+  - first:
+      213: 6426981301862680134
+    second: Flamethrower4_497x249_116
+  - first:
+      213: 4623761222864642604
+    second: Flamethrower4_497x249_117
+  - first:
+      213: -6875926584931085919
+    second: Flamethrower4_497x249_118
+  - first:
+      213: 4524346028591191618
+    second: Flamethrower4_497x249_119
+  - first:
+      213: -3041080595437695802
+    second: Flamethrower4_497x249_120
+  - first:
+      213: 2956830456741091143
+    second: Flamethrower4_497x249_121
+  - first:
+      213: -2739947694924028865
+    second: Flamethrower4_497x249_122
+  - first:
+      213: -8072645520273094790
+    second: Flamethrower4_497x249_123
+  - first:
+      213: 4191099185544364198
+    second: Flamethrower4_497x249_124
+  - first:
+      213: 4237609637276064930
+    second: Flamethrower4_497x249_125
+  - first:
+      213: -5715643473515181749
+    second: Flamethrower4_497x249_126
+  - first:
+      213: 3011174893469443233
+    second: Flamethrower4_497x249_127
+  - first:
+      213: 6480599001167529707
+    second: Flamethrower4_497x249_128
+  - first:
+      213: -2602020257797083986
+    second: Flamethrower4_497x249_129
+  - first:
+      213: 5979977984905346953
+    second: Flamethrower4_497x249_130
+  - first:
+      213: -7098983925612067852
+    second: Flamethrower4_497x249_131
+  - first:
+      213: 3169399910248333120
+    second: Flamethrower4_497x249_132
+  - first:
+      213: -3815427653740141918
+    second: Flamethrower4_497x249_133
+  - first:
+      213: 5010888066592543954
+    second: Flamethrower4_497x249_134
+  - first:
+      213: -5746087129510811001
+    second: Flamethrower4_497x249_135
+  - first:
+      213: -6978015804842389060
+    second: Flamethrower4_497x249_136
+  - first:
+      213: 6235930151432563554
+    second: Flamethrower4_497x249_137
+  - first:
+      213: 1711382333796652352
+    second: Flamethrower4_497x249_138
+  - first:
+      213: -4317970610595191294
+    second: Flamethrower4_497x249_139
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Flamethrower4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1245
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def04158accb75049bbef3ff55f38af3
+      internalID: -1011339117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_1
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1245
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948a2409164e2f54284fbb01208c2758
+      internalID: 1903836684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_2
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1245
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a32b71ca3a7832408dbbcc3078b4ec8
+      internalID: 1245067886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_3
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1245
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad4b510b50cf4d48b3f3926d82991d1
+      internalID: -96518859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_4
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 1245
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e18a4851c77594b852489f6915706d
+      internalID: -1261327028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_5
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 1245
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edca0847f4704424692fd07c2dd51032
+      internalID: 1868483157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 996
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47bfce250f42c5d469a99376611ed7b6
+      internalID: 1967422588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_7
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 996
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620a0bf77886fd3428ed2ec5d7e794a5
+      internalID: -1501581674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_8
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 996
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce5f27242f2e644a865ed4fd2e4396a
+      internalID: 468678526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_9
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 996
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d8fd26894cdf845ae15208f2858191
+      internalID: 2072903288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_10
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 996
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea694ffc9fa765468906def7706a03a
+      internalID: 2100251876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_11
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 996
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e98bfd60088d8b4f90fe4c8ec716542
+      internalID: -241647048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 747
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2db68c7bd39c914b84d360a6735d6bd
+      internalID: 712591264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_13
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 747
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c2ac411e4f51d488591df526f0b043
+      internalID: 1437840342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_14
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 747
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03f106e5ccaf5e469f904f757c69035
+      internalID: 1674821297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_15
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 747
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b4a64f2127ac442a0b323da3028019
+      internalID: 914130544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_16
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 747
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70af9c8a5313cd24cb5a095afa49dd8d
+      internalID: 1079291405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_17
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 747
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea2d74af3d5ed942ba3bd45bfe9203a
+      internalID: -1985741373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 498
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599da55aafc6d4944b4298fa07305f4a
+      internalID: 751040751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_19
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 498
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53dbe62a59b31fc4fa500bbb47a3d85b
+      internalID: 1096330827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_20
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 498
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5093fdf89604e044bae9b9355b37a65d
+      internalID: -1113911310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_21
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 498
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d04e6b16134ccc4b8c7fa078b8c1837
+      internalID: 903538902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_22
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 498
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e69ac3cfa7836488a1cea59fe4118c
+      internalID: -828063214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_23
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 498
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca3709ef702d47428a89ee81bf3ff0b
+      internalID: -1405786169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 249
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab74f21e88456ac4f82ffd7457c6b851
+      internalID: 880004844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_25
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 249
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3a4afe58058974fb05f67894dfc627
+      internalID: -692375291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flamethrower4_26
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 249
+        width: 497
+        height: 249
+      alignment: 9
+      pivot: {x: 0.03352866, y: 0.4140914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b49dd2063f004348ac9e019758d73ce
+      internalID: 236866244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 919be48afc4cdc6499ff7ccfd103934b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Flamethrower4_0: -1011339117
+      Flamethrower4_1: 1903836684
+      Flamethrower4_10: 2100251876
+      Flamethrower4_11: -241647048
+      Flamethrower4_12: 712591264
+      Flamethrower4_13: 1437840342
+      Flamethrower4_14: 1674821297
+      Flamethrower4_15: 914130544
+      Flamethrower4_16: 1079291405
+      Flamethrower4_17: -1985741373
+      Flamethrower4_18: 751040751
+      Flamethrower4_19: 1096330827
+      Flamethrower4_2: 1245067886
+      Flamethrower4_20: -1113911310
+      Flamethrower4_21: 903538902
+      Flamethrower4_22: -828063214
+      Flamethrower4_23: -1405786169
+      Flamethrower4_24: 880004844
+      Flamethrower4_25: -692375291
+      Flamethrower4_26: 236866244
+      Flamethrower4_3: -96518859
+      Flamethrower4_4: -1261327028
+      Flamethrower4_5: 1868483157
+      Flamethrower4_6: 1967422588
+      Flamethrower4_7: -1501581674
+      Flamethrower4_8: 468678526
+      Flamethrower4_9: 2072903288
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

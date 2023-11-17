@@ -21,6 +21,7 @@ public class BattleManager : Singleton<BattleManager>
 
     [Header("UI")]
     [SerializeField] private BattleUIManager ui;
+    
 
     
 
@@ -65,6 +66,7 @@ public class BattleManager : Singleton<BattleManager>
             case BattleState.BATTLE_INACTIVE:
                 {
                     //nothing
+                    if (ui.active) ui.HideAll();
                 }
                 break;
             case BattleState.BATTLE_START:
@@ -84,6 +86,7 @@ public class BattleManager : Singleton<BattleManager>
             case BattleState.PLAYER_DECISION:
                 //wait for user input
                 ui.detectInput = true;
+                ui.active = true;
                 if (player.HP <= 0) { state = BattleState.BATTLE_STOP; }
                 break;
 
@@ -135,7 +138,8 @@ public class BattleManager : Singleton<BattleManager>
                 break;
             case BattleState.BATTLE_STOP:
                 //decide win / loss
-                active = false;
+                //active = false;
+                Invoke("ResetBattle", 3);
                 ui.HideAll();
                 if (stateTimer <= 0 && victory) state = BattleState.BATTLE_WON;
                 if (stateTimer <= 0 && !victory) state = BattleState.BATTLE_LOST;
@@ -144,14 +148,17 @@ public class BattleManager : Singleton<BattleManager>
             case BattleState.BATTLE_WON:
                 //give player xp / gold, send to overworld position
                 GameManager.Instance.BattleTransition();
+                //GameManager.Instance.TransitionScreen();
                 state = BattleState.BATTLE_INACTIVE;
                 break;
 
             case BattleState.BATTLE_LOST:
                 //game over, send back to home
                 state = BattleState.BATTLE_INACTIVE;
+                //GameManager.Instance.TransitionScreen();
                 GameManager.Instance.BattleTransition();
-                SceneManager.LoadScene("House");
+                //SceneManager.LoadScene("House");
+                LoadingScreen.Instance.LoadScene(1);
                 break;
             default:
                 break;
@@ -180,6 +187,7 @@ public class BattleManager : Singleton<BattleManager>
         ui.OnInitialize();
         state = BattleState.BATTLE_START;
 
+        player.actions = GameManager.Instance.player.actions;
     }
     public void OnPlayerDecide()
     {
@@ -225,17 +233,20 @@ public class BattleManager : Singleton<BattleManager>
     public void OnPlayerDeath()
     {
         active = false;
-        stateTimer = 3;
+        stateTimer = 4;
         state = BattleState.BATTLE_STOP;
         victory = false;
         player.initialized = false;
+        //GameManager.Instance.TransitionScreen();
     }    
     public void OnPlayerFlee()
     {
         active = false;
         victory = false;
+        Invoke("ResetBattle", 2);
         state = BattleState.BATTLE_INACTIVE;
         GameManager.Instance.BattleTransition();
+        //GameManager.Instance.TransitionScreen();
     }
     //public void OnNextTurn()
     //{
@@ -271,5 +282,12 @@ public class BattleManager : Singleton<BattleManager>
             else state = BattleState.ENEMY_DECISION;
         }
         else state = BattleState.BATTLE_STOP;
+    }
+    public void ResetBattle()
+    {
+        active = false;
+        activeEnemies.Clear();
+        foreach (var enemy in enemies) enemy.gameObject.SetActive(false);
+        ui.detectInput = false;
     }
 }

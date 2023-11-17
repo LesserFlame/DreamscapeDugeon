@@ -15,40 +15,59 @@ public class BattleEffect : MonoBehaviour
     public float spawnCount = 1;
     public float spawnDelay = 0;
     public float deathDelay = 1;
+    public float delay = 0;
+    public bool ownerTransform = true;
 
     public BattleAction owner;
     [SerializeField] private ParticleSystem deathEffect;
     private Rigidbody2D rb;
-
+    private bool appliedDamage = false;
+    private float deathTimer;
+    private bool isDead = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        deathTimer = delay;
+    }
+    private void Update()
+    {
+        if (delay > 0)
+        {
+            deathTimer -= Time.deltaTime;
+            if (deathTimer <= 0) Death();
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //apply damage and destroy self
-        if (!collision.gameObject.CompareTag(tag)) owner.ApplyDamage();
+        if (!collision.gameObject.CompareTag(tag)) owner.ApplyDamage(); appliedDamage = true;
         Death();
     }
 
     private void Death()
     {
-        GetComponent<ParticleSystem>().Stop();
-        if (rb != null) 
-        { 
-            //rb.velocity = Vector3.zero;
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            gameObject.GetComponent<Collider2D>().enabled = false;
-        }
-        if (deathEffect != null)
+        if (!isDead)
         {
-            Instantiate(deathEffect, gameObject.transform);
+            GetComponent<ParticleSystem>().Stop();
+            if (rb != null)
+            {
+                //rb.velocity = Vector3.zero;
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                gameObject.GetComponent<Collider2D>().enabled = false;
+            }
+            if (deathEffect != null)
+            {
+                Instantiate(deathEffect, gameObject.transform);
+            }
+            Invoke("OnDestroy", deathDelay);
+            if (!appliedDamage) owner.ApplyDamage();
+            isDead = true;
         }
-        Invoke("OnDestroy", deathDelay);
     }
 
     private void OnDestroy()
     {
+        if (!isDead) Death();
         Destroy(gameObject);
     }
 }

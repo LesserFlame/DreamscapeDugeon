@@ -254,21 +254,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactor: {fileID: 4780979491031867100}
+  overlapRadius: 0.1
+  detectInput: 1
   loadStats: 0
   speed: 2
   sprintSpeed: 5
-  animSpeed: 0.3
-  sprintAnimSpeed: 0.6
+  animSpeed: 0.425
+  sprintAnimSpeed: 0.725
+  actions: []
+  totalActions:
+  - {fileID: 11400000, guid: 05eff1ec96d9e384da78771fa7456853, type: 2}
+  - {fileID: 11400000, guid: 987f7502fc2865a4db47dcf9a5b0dcc4, type: 2}
+  - {fileID: 11400000, guid: faabcadde8ce96a41a19a1b25f941323, type: 2}
   leveler: {fileID: 11400000, guid: 4037fb33458de0e429cc2235d88171a2, type: 2}
+  level: 1
+  XP: 0
+  HP: 0
+  MP: 0
+  SP: 0
+  ATK: 0
+  DEF: 0
   data:
-    LVL: 1
-    XP: 0
-    HP: 20
-    MP: 15
-    SP: 2
-    ATK: 2
-    DEF: 2
+    SKILLLVL: 1
+    SKILLXP: 0
+    SKILLS: 000000000000
+    POINTS: 0
   levelConfig: {fileID: 11400000, guid: f3d562200f95415448314fa317e46fb2, type: 2}
+  skillLevelConfig: {fileID: 11400000, guid: b1c6feb42bbc4c54ab908a632b0bdc7d, type: 2}
 --- !u!212 &7436589350777966441
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -527,10 +539,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.7109756
+    x: 0.78594255
     y: 0
-    width: 0.9512195
-    height: 1.1653386
+    width: 0.7476039
+    height: 0.80689657
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

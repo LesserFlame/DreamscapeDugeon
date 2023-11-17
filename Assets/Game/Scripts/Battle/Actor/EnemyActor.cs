@@ -48,6 +48,12 @@ public class EnemyActor : BattleActor
         BattleManager.Instance.activeEnemies.Remove(this);
         BattleManager.Instance.OnEnemyDeath();
         GameManager.Instance.player.IncreaseXP(rewardXP);
+
+        var player = BattleManager.Instance.player;
+        if (player.pyroRebirth)
+        {
+            player.OnManaChange(maxHP);
+        }
     }
 
     public override void OnDecide()

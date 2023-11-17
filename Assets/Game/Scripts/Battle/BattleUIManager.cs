@@ -11,7 +11,8 @@ public class BattleUIManager : Singleton<BattleUIManager>
     [SerializeField] private OptionsMenuHandler optionsMenu;
     [SerializeField] private List<SliderTextHandler> sliderHandlers;
     [SerializeField] private List<GameObject> buttons;
-    [HideInInspector] public bool detectInput = true;
+    /*[HideInInspector]*/ public bool detectInput = false;
+    [HideInInspector] public bool active = false;
 
     [SerializeField] private List<int> options;
 
@@ -54,6 +55,9 @@ public class BattleUIManager : Singleton<BattleUIManager>
             if (menuOption == 0 && menuLayer == 0 && swap)
             {
                 menuLayer = 1;
+                menuOption = 0;
+                //optionsMenu.UpdateDisplayOptions();
+                OnHighlightOptions(menuOption);
                 swap = false;
             }
             if (menuOption == 2 && menuLayer == 0 && swap)
@@ -64,20 +68,26 @@ public class BattleUIManager : Singleton<BattleUIManager>
             if (menuLayer == 1 && swap)
             {
                 playerAction.data = optionsMenu.battleActions[menuOption];
-                menuLayer = 2;
-                menuOption = 0;
-                swap = false;
+                if (BattleManager.Instance.player.MP >= playerAction.data.manaCost)
+                {
+                    menuLayer = 2;
+                    menuOption = 0;
+                    swap = false;
+                }
             }
             if (menuLayer == 2 && swap)
             {
-                playerAction.target = BattleManager.Instance.activeEnemies[menuOption];
-                playerAction.Perform();
-                menuLayer = 0;
-                menuOption = 0;
-                updateMenus = false;
-                BattleManager.Instance.OnPlayerDecide();
+                if (BattleManager.Instance.player.MP > playerAction.data.manaCost)
+                {
+                    playerAction.target = BattleManager.Instance.activeEnemies[menuOption];
+                    playerAction.Perform();
+                    menuLayer = 0;
+                    menuOption = 0;
+                    updateMenus = false;
+                    BattleManager.Instance.OnPlayerDecide();
+                }
             }
-            menuOption = 0;
+            //menuOption = 0;
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
@@ -97,14 +107,14 @@ public class BattleUIManager : Singleton<BattleUIManager>
                 case 1:
                     OnShowButtons(false);
                     OnShowOptions();
-                    OnHighlightOptions(menuOption);
                     optionsMenu.ChangeMenuList(menuLayer - 1);
+                    OnHighlightOptions(menuOption);
                     break;
                 case 2:
                     OnShowButtons(false);
                     OnShowOptions();
-                    OnHighlightOptions(menuOption);
                     optionsMenu.ChangeMenuList(menuLayer - 1);
+                    OnHighlightOptions(menuOption);
                     break;
             }
         }
@@ -170,5 +180,8 @@ public class BattleUIManager : Singleton<BattleUIManager>
     {
         OnShowButtons(false);
         OnShowOptions(false);
+        menuLayer = 0;
+        menuOption = 0;
+        active = false;
     }
 }

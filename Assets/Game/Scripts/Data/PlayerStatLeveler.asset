@@ -39,13 +39,13 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   MP:
-    baseStatValue: 15
+    baseStatValue: 30
     baseStatModifier:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0
+        time: -0.006225586
+        value: 0.19999695
         inSlope: 2
         outSlope: 2
         tangentMode: 0

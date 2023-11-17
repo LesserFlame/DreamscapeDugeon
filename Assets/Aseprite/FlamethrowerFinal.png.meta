@@ -1,0 +1,1480 @@
+fileFormatVersion: 2
+guid: 0fce05dcfb610b54490a4f19e750cc17
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8986286517394690401
+    second: FlamethrowerFinal_0
+  - first:
+      213: 1543619951688551028
+    second: FlamethrowerFinal_1
+  - first:
+      213: -3182441840508020280
+    second: FlamethrowerFinal_2
+  - first:
+      213: 7334404332167099367
+    second: FlamethrowerFinal_3
+  - first:
+      213: 2238679369120872449
+    second: FlamethrowerFinal_4
+  - first:
+      213: 1717896565353005517
+    second: FlamethrowerFinal_5
+  - first:
+      213: -2295024120724521380
+    second: FlamethrowerFinal_6
+  - first:
+      213: -1404076217896080219
+    second: FlamethrowerFinal_7
+  - first:
+      213: 1723825905304253772
+    second: FlamethrowerFinal_8
+  - first:
+      213: -4788135062653490220
+    second: FlamethrowerFinal_9
+  - first:
+      213: 82681760911350047
+    second: FlamethrowerFinal_10
+  - first:
+      213: -1732668952260452410
+    second: FlamethrowerFinal_11
+  - first:
+      213: 8722628717841461641
+    second: FlamethrowerFinal_12
+  - first:
+      213: 8619975077940545433
+    second: FlamethrowerFinal_13
+  - first:
+      213: -7065392963970118146
+    second: FlamethrowerFinal_14
+  - first:
+      213: -2636702175777438946
+    second: FlamethrowerFinal_15
+  - first:
+      213: 3210959499787651613
+    second: FlamethrowerFinal_16
+  - first:
+      213: -2141428199774461960
+    second: FlamethrowerFinal_17
+  - first:
+      213: -2744759734833753533
+    second: FlamethrowerFinal_18
+  - first:
+      213: 5169835968510515774
+    second: FlamethrowerFinal_19
+  - first:
+      213: 4617994091985909752
+    second: FlamethrowerFinal_20
+  - first:
+      213: 294821819011469605
+    second: FlamethrowerFinal_21
+  - first:
+      213: 5141185849236345022
+    second: FlamethrowerFinal_22
+  - first:
+      213: -2810929162495483594
+    second: FlamethrowerFinal_23
+  - first:
+      213: -2186133782824321243
+    second: FlamethrowerFinal_24
+  - first:
+      213: -735638093153480872
+    second: FlamethrowerFinal_25
+  - first:
+      213: -8215756119833598222
+    second: FlamethrowerFinal_26
+  - first:
+      213: -6895979999276468221
+    second: FlamethrowerFinal_27
+  - first:
+      213: -4826118209288516411
+    second: FlamethrowerFinal_28
+  - first:
+      213: -3785255949904282656
+    second: FlamethrowerFinal_29
+  - first:
+      213: 4490788157244410437
+    second: FlamethrowerFinal_30
+  - first:
+      213: 7335720965708555774
+    second: FlamethrowerFinal_31
+  - first:
+      213: 3496240715631314876
+    second: FlamethrowerFinal_32
+  - first:
+      213: 207816883419488156
+    second: FlamethrowerFinal_33
+  - first:
+      213: -4114428614356151446
+    second: FlamethrowerFinal_34
+  - first:
+      213: -2045410457874699947
+    second: FlamethrowerFinal_35
+  - first:
+      213: 7437559619576039164
+    second: FlamethrowerFinal_36
+  - first:
+      213: -8604865372416295952
+    second: FlamethrowerFinal_37
+  - first:
+      213: -1981834828244092052
+    second: FlamethrowerFinal_38
+  - first:
+      213: 2736368441224580830
+    second: FlamethrowerFinal_39
+  - first:
+      213: 7870236560112958164
+    second: FlamethrowerFinal_40
+  - first:
+      213: 5750075586134028400
+    second: FlamethrowerFinal_41
+  - first:
+      213: -7405074614901835460
+    second: FlamethrowerFinal_42
+  - first:
+      213: 1012699502539152071
+    second: FlamethrowerFinal_43
+  - first:
+      213: 6240277875194136385
+    second: FlamethrowerFinal_44
+  - first:
+      213: 6045671702556057812
+    second: FlamethrowerFinal_45
+  - first:
+      213: -1775193300569181041
+    second: FlamethrowerFinal_46
+  - first:
+      213: -1623415432429466135
+    second: FlamethrowerFinal_47
+  - first:
+      213: 3422912343304190106
+    second: FlamethrowerFinal_48
+  - first:
+      213: 442643674051028271
+    second: FlamethrowerFinal_49
+  - first:
+      213: -657666024988919385
+    second: FlamethrowerFinal_50
+  - first:
+      213: 1455851537726307193
+    second: FlamethrowerFinal_51
+  - first:
+      213: -6382893773626365049
+    second: FlamethrowerFinal_52
+  - first:
+      213: 5509229869167456985
+    second: FlamethrowerFinal_53
+  - first:
+      213: -3118358780318888668
+    second: FlamethrowerFinal_54
+  - first:
+      213: -2981346846224615555
+    second: FlamethrowerFinal_55
+  - first:
+      213: -6820553287858581429
+    second: FlamethrowerFinal_56
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FlamethrowerFinal_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 448
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1615137e9f3b5bc70800000000000000
+      internalID: 8986286517394690401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_1
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 448
+        width: 47
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a0a98ea2a0c6510800000000000000
+      internalID: 1543619951688551028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_2
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 447
+        width: 75
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9dd22e102b5d3d0800000000000000
+      internalID: -3182441840508020280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_3
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 445
+        width: 104
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3f7e971e909c560800000000000000
+      internalID: 7334404332167099367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_4
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 443
+        width: 126
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108f1727603611f10800000000000000
+      internalID: 2238679369120872449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_5
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 441
+        width: 146
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1caba03d137d710800000000000000
+      internalID: 1717896565353005517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_6
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 436
+        width: 168
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ef245c8bf6620e0800000000000000
+      internalID: -2295024120724521380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 362
+        width: 187
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aceab27e18b38ce0800000000000000
+      internalID: -1404076217896080219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_8
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 370
+        width: 205
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45b64417824ce710800000000000000
+      internalID: 1723825905304253772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_9
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 362
+        width: 225
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db22f577802d8db0800000000000000
+      internalID: -4788135062653490220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_10
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 359
+        width: 209
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19568c9f9eb52100800000000000000
+      internalID: 82681760911350047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_11
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 382
+        width: 50
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cfda2b94c254f7e0800000000000000
+      internalID: -1732668952260452410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_12
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 359
+        width: 230
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981bf8aba900d0970800000000000000
+      internalID: 8722628717841461641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_13
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 360
+        width: 246
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997cd5da9ad40a770800000000000000
+      internalID: 8619975077940545433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_14
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 409
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd4408888ea2fd90800000000000000
+      internalID: -7065392963970118146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_15
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 366
+        width: 245
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13494a475d886bd0800000000000000
+      internalID: -2636702175777438946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_16
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 388
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1a420517ae9f8c20800000000000000
+      internalID: 3210959499787651613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_17
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 363
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff5078e56e1842e0800000000000000
+      internalID: -2141428199774461960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_18
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 360
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34250734097a8e9d0800000000000000
+      internalID: -2744759734833753533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_19
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 364
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a5b122c62feb740800000000000000
+      internalID: 5169835968510515774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 296
+        width: 222
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f73ca3d829661040800000000000000
+      internalID: 4617994091985909752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_21
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 303
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5219632e1ea671400800000000000000
+      internalID: 294821819011469605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_22
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 295
+        width: 237
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb05ffb6a49295740800000000000000
+      internalID: 5141185849236345022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_23
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 293
+        width: 246
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631aba4d1d29df8d0800000000000000
+      internalID: -2810929162495483594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_24
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 292
+        width: 228
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f764b38ea49a1e0800000000000000
+      internalID: -2186133782824321243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_25
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 292
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f47564d0d7ac5f0800000000000000
+      internalID: -735638093153480872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_26
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 295
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6a3148655cbfd80800000000000000
+      internalID: -8215756119833598222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_27
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 288
+        width: 247
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3087de42abe8c40a0800000000000000
+      internalID: -6895979999276468221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_28
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 290
+        width: 245
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc405bfe0f260db0800000000000000
+      internalID: -4826118209288516411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_29
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 286
+        width: 244
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eb750ac4c1187bc0800000000000000
+      internalID: -3785255949904282656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_30
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 296
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a851a290c725e30800000000000000
+      internalID: 4490788157244410437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 221
+        width: 247
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5a17c1a57bdc560800000000000000
+      internalID: 7335720965708555774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_32
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 265
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb746703864258030800000000000000
+      internalID: 3496240715631314876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_33
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 223
+        width: 245
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f1c8aba5052e200800000000000000
+      internalID: 207816883419488156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_34
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 226
+        width: 243
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63599379fc96e6c0800000000000000
+      internalID: -4114428614356151446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_35
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 227
+        width: 240
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559628e860e3d93e0800000000000000
+      internalID: -2045410457874699947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_36
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 223
+        width: 236
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf68e907115873760800000000000000
+      internalID: 7437559619576039164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_37
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 230
+        width: 228
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb3119c880659880800000000000000
+      internalID: -8604865372416295952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_38
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 265
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b730359bb1f74e0800000000000000
+      internalID: -1981834828244092052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_39
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 266
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edec7c1799889f520800000000000000
+      internalID: 2736368441224580830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_40
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 234
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da33dff372b83d60800000000000000
+      internalID: 7870236560112958164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_41
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 254
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0703a27c74f5ccf40800000000000000
+      internalID: 5750075586134028400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_42
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 258
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c39738b1fd3eb3990800000000000000
+      internalID: -7405074614901835460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_43
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 233
+        width: 63
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca9f0105d4dd0e00800000000000000
+      internalID: 1012699502539152071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_44
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 257
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1470da24aabe99650800000000000000
+      internalID: 6240277875194136385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_45
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 236
+        width: 103
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d02c73d16a86e350800000000000000
+      internalID: 6045671702556057812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_46
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 255
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84bbe7391f3d57e0800000000000000
+      internalID: -1775193300569181041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_47
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 242
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed8723f3487879e0800000000000000
+      internalID: -1623415432429466135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_48
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 250
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9832ff04a0a08f20800000000000000
+      internalID: 3422912343304190106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_49
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 257
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f25a2e98316942600800000000000000
+      internalID: 442643674051028271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_50
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 240
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a931b71c308fd6f0800000000000000
+      internalID: -657666024988919385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_51
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 239
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bf1e79249343410800000000000000
+      internalID: 1455851537726307193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_52
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 236
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ba2ff4ee76b67a0800000000000000
+      internalID: -6382893773626365049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_53
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 170
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2b2b97067b47c40800000000000000
+      internalID: 5509229869167456985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_54
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 169
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d4fd8063d59b4d0800000000000000
+      internalID: -3118358780318888668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_55
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 168
+        width: 60
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77fc86d6d020a6d0800000000000000
+      internalID: -2981346846224615555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamethrowerFinal_56
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 166
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b401199ebe68851a0800000000000000
+      internalID: -6820553287858581429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

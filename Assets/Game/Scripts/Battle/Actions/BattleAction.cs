@@ -26,7 +26,6 @@ public class BattleAction : MonoBehaviour
     public void ApplyDamage()
     {
         target.OnTakeDamage(owner.baseATK * data.damage);
-        //if (owner.gameObject.CompareTag("Player")) BattleManager.Instance.OnPlayerAction(); //Manually change to enemy turn
     }
     public void SpawnEffect()
     {
@@ -37,15 +36,21 @@ public class BattleAction : MonoBehaviour
         BattleEffect effectRef = Instantiate(data.effect, spawnTransform.position, Quaternion.FromToRotation(owner.transform.position, target.transform.position));
         effectRef.tag = gameObject.tag;
         effectRef.owner = this;
-        
-        if (effectRef.effectType == BattleEffect.EffectType.PROJECTILE)
+        if (!effectRef.ownerTransform) effectRef.transform.position = target.transform.position;
+        switch (effectRef.effectType)
         {
-            var rb = effectRef.gameObject.GetComponent<Rigidbody2D>();
-            Vector2 direction = target.transform.position - owner.transform.position;
-            rb.AddForce(direction * data.effect.force, ForceMode2D.Impulse);
-        }
+            case BattleEffect.EffectType.PROJECTILE:
+                var rb = effectRef.gameObject.GetComponent<Rigidbody2D>();
+                Vector2 direction = target.transform.position - owner.transform.position;
+                rb.AddForce(direction * data.effect.force, ForceMode2D.Impulse);
+                break;
+            case BattleEffect.EffectType.ANIMATION:
+                Vector3 rotationDirection = (target.transform.position + (Vector3.up * 0.5f)) - effectRef.transform.position;
+                rotationDirection.Normalize();
 
-        //spawnCount--;
-        //if (spawnCount > 0) Invoke("Spawn", spawnDelay);
+                float angle = Mathf.Atan2(rotationDirection.y, rotationDirection.x) * Mathf.Rad2Deg;
+                effectRef.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                break;
+        }
     }
 }
