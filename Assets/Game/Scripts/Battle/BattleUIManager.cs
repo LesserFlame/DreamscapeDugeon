@@ -13,8 +13,11 @@ public class BattleUIManager : Singleton<BattleUIManager>
     [SerializeField] private List<GameObject> buttons;
     /*[HideInInspector]*/ public bool detectInput = false;
     [HideInInspector] public bool active = false;
+    [SerializeField] private float actionDelay = 1;
+    [SerializeField] private GameObject spellFX; 
 
-    [SerializeField] private List<int> options;
+    [SerializeField] private List<int> options; 
+    [SerializeField] private List<GameObject> menuSounds; 
 
     private BattleAction playerAction;
 
@@ -40,11 +43,13 @@ public class BattleUIManager : Singleton<BattleUIManager>
         bool updateMenus = true;
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            Instantiate(menuSounds[0]);
             menuOption++;
             if (menuOption >= options[menuLayer]) menuOption = 0;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            Instantiate(menuSounds[0]);
             menuOption--;
             if (menuOption < 0) menuOption = options[menuLayer]-1;
         }
@@ -54,14 +59,17 @@ public class BattleUIManager : Singleton<BattleUIManager>
             bool swap = true;
             if (menuOption == 0 && menuLayer == 0 && swap)
             {
+                Instantiate(menuSounds[1]);
                 menuLayer = 1;
                 menuOption = 0;
                 //optionsMenu.UpdateDisplayOptions();
                 OnHighlightOptions(menuOption);
                 swap = false;
             }
+            if (menuOption == 1 && menuLayer == 0 && swap) Instantiate(menuSounds[4]);
             if (menuOption == 2 && menuLayer == 0 && swap)
             {
+                Instantiate(menuSounds[1]);
                 BattleManager.Instance.OnPlayerFlee();
                 swap = false;
             }
@@ -70,30 +78,36 @@ public class BattleUIManager : Singleton<BattleUIManager>
                 playerAction.data = optionsMenu.battleActions[menuOption];
                 if (BattleManager.Instance.player.MP >= playerAction.data.manaCost)
                 {
+                    Instantiate(menuSounds[1]);
                     menuLayer = 2;
                     menuOption = 0;
                     swap = false;
                 }
+                else Instantiate(menuSounds[4]);
             }
             if (menuLayer == 2 && swap)
             {
-                if (BattleManager.Instance.player.MP > playerAction.data.manaCost)
+                if (BattleManager.Instance.player.MP >= playerAction.data.manaCost)
                 {
+                    Instantiate(menuSounds[1]);
                     playerAction.target = BattleManager.Instance.activeEnemies[menuOption];
-                    playerAction.Perform();
+                    Invoke("PerformAction", actionDelay);
+                    Instantiate(spellFX, BattleManager.Instance.player.spellTransform);
                     menuLayer = 0;
                     menuOption = 0;
                     updateMenus = false;
                     BattleManager.Instance.OnPlayerDecide();
                 }
+                else Instantiate(menuSounds[4]);
             }
             //menuOption = 0;
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
+            if (menuLayer != 0)Instantiate(menuSounds[2]);
             menuLayer--;
             if (menuLayer < 0) menuLayer = 0;
-            menuOption = 0; 
+            menuOption = 0;
         }
         if (Input.anyKeyDown && updateMenus)
         {
@@ -119,7 +133,10 @@ public class BattleUIManager : Singleton<BattleUIManager>
             }
         }
     }
-
+    public void PerformAction()
+    {
+        playerAction.Perform();
+    }
     public void OnSliderChanged(int id, float value, float maxValue, bool lerp = true)
     {
         if (value < 0) { value = 0; }
@@ -131,6 +148,7 @@ public class BattleUIManager : Singleton<BattleUIManager>
     }
     public void OnShowButtons(bool show = true)
     {
+        //if (show) { Instantiate(menuSounds[3]); }
         foreach (var button in buttons) 
         {
             button.GetComponent<Animator>().SetBool("Open", show);
@@ -178,6 +196,7 @@ public class BattleUIManager : Singleton<BattleUIManager>
     }
     public void HideAll()
     {
+        //if (GameManager.Instance.inBattle) Instantiate(menuSounds[4]);
         OnShowButtons(false);
         OnShowOptions(false);
         menuLayer = 0;

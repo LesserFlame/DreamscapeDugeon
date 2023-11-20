@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7577360918851528531}
   - component: {fileID: 6031500390129840727}
   - component: {fileID: -7247597162411541484}
+  - component: {fileID: 6284915991295616271}
   m_Layer: 0
   m_Name: EruptionFX
   m_TagString: Untagged
@@ -4917,3 +4918,16 @@ MonoBehaviour:
   ownerTransform: 0
   owner: {fileID: 0}
   deathEffect: {fileID: 7466170778154516174, guid: e2f3f817da1698648852a2fa8083b041, type: 3}
+--- !u!114 &6284915991295616271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4482808761027028826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab60357b6c1679440a909ed4199117ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioData: {fileID: 11400000, guid: b96792008cb40784db455fbdc92f3c7a, type: 2}

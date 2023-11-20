@@ -270,4 +270,14 @@ public class PlayerController : MonoBehaviour
         //ATK = data.ATK;
         //DEF = data.DEF;
     }
+    public void OnFootstepSpawn(GameObject go)
+    {
+        if (go != null)
+        {
+            //Transform bottom = animator.GetBoneTransform(HumanBodyBones.LeftFoot);
+            Vector3 spawnPos = transform.position;
+            //spawnPos.y = bottom.position.y;
+            Instantiate(go, spawnPos, Quaternion.identity);
+        }
+    }
 }

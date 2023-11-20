@@ -10,9 +10,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] public PlayerData playerData;
 
     [SerializeField] public bool inBattle = false;
+    //[SerializeField] public bool inDungeon = false;
     [SerializeField] public BattleActionData[] battleActionDatas;
     [SerializeField] private TransitionScreen transitionScreen;
-
+    [SerializeField] public MusicPlayer dungeonMusic;
     private void Start()
     {
         if (mainCamera != null) mainCamera.gameObject.SetActive(!inBattle);
@@ -56,6 +57,7 @@ public class GameManager : Singleton<GameManager>
         //Debug.Log(player.LVL);
         SaveSystem.SavePlayer(player);
         //Debug.Log("Exit");
+        if (!inBattle) dungeonMusic.PlaySong();
     }
     public void TransitionScreen()
     {

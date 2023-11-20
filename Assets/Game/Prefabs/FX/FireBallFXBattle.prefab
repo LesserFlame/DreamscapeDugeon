@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8542716512639616017}
   - component: {fileID: 514567847908299594}
   - component: {fileID: -2413256809442386556}
+  - component: {fileID: 5129675302227091401}
   m_Layer: 0
   m_Name: FireBallFXBattle
   m_TagString: Untagged
@@ -4925,6 +4926,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.09
+--- !u!114 &5129675302227091401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944437376659082695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab60357b6c1679440a909ed4199117ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioData: {fileID: 11400000, guid: 22deb3208c2c30946a40afea63e05890, type: 2}
 --- !u!1001 &1788523590035686289
 PrefabInstance:
   m_ObjectHideFlags: 0

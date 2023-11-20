@@ -48,7 +48,8 @@ public class BattleEffect : MonoBehaviour
     {
         if (!isDead)
         {
-            GetComponent<ParticleSystem>().Stop();
+            var particle = GetComponent<ParticleSystem>();
+            if (particle != null) { particle.Stop(); }
             if (rb != null)
             {
                 //rb.velocity = Vector3.zero;

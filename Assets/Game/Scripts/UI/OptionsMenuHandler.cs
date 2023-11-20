@@ -48,7 +48,7 @@ public class OptionsMenuHandler : MonoBehaviour
                 //GetPlayerActions();
                 for (int i = 0; i < optionsButtons.Count; i++)
                 {
-                    if (i < battleActions.Count) optionsButtons[i].selectable = (BattleManager.Instance.player.MP > battleActions[i].manaCost);
+                    if (i < battleActions.Count) optionsButtons[i].selectable = (BattleManager.Instance.player.MP >= battleActions[i].manaCost);
                     if (i < optionsButtons.Count && i < battleActions.Count)
                     {
                         optionsButtons[i].OnUpdateDisplay(testSprite, battleActions[i].actionName);

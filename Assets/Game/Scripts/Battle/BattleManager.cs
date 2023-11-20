@@ -10,8 +10,8 @@ using UnityEngine.UI;
 public class BattleManager : Singleton<BattleManager>
 {
     [Header("Music")]
-    [SerializeField] AudioClip music;
-    [SerializeField] AudioSource musicSource;
+    //[SerializeField] AudioClip music;
+    [SerializeField] MusicPlayer musicPlayer;
 
     [Header("Actors")]
     [SerializeField] public PlayerActor player;
@@ -51,10 +51,10 @@ public class BattleManager : Singleton<BattleManager>
 
     void Start()
     {
-        if (musicSource == null)
-        {
-            musicSource = new AudioSource();
-        }
+        //if (musicPlayer != null)
+        //{
+        //    musicSource = new AudioSource();
+        //}
         ui.HideAll();
     }
 
@@ -70,10 +70,9 @@ public class BattleManager : Singleton<BattleManager>
                 }
                 break;
             case BattleState.BATTLE_START:
-                if (music != null)
+                if (musicPlayer != null)
                 {
-                    musicSource.clip = music;
-                    musicSource.Play();
+                    musicPlayer.PlaySong();
                 }
                 ui.HideAll();
                 ui.detectInput = false;

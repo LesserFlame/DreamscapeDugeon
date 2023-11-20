@@ -77,7 +77,7 @@ public class PlayerActor : BattleActor
         infusion = player.data.SKILLS[0];
         pyroRebirth = player.data.SKILLS[1];
 
-        //BattleUIManager.Instance.OnSliderChanged(0, HP, maxHP, false);
-        //BattleUIManager.Instance.OnSliderChanged(1, MP, maxMP, false);
+        BattleUIManager.Instance.OnSliderChanged(0, HP, maxHP, false);
+        BattleUIManager.Instance.OnSliderChanged(1, MP, maxMP, false);
     }
 }

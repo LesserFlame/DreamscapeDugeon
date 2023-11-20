@@ -41,7 +41,7 @@ public class SliderTextHandler : MonoBehaviour
         if (!percentage) textObject.text = displayText + (int)currentValue + " / " + maxValue;
         else textObject.text = (int)(currentValue * 100) + "%";
 
-        if (currentValue < 1) currentValue = 0;
-        if (currentValue > maxValue - 1) currentValue = maxValue;
+        //if (currentValue < 1) currentValue = 0;
+        //if (currentValue > maxValue - 1) currentValue = maxValue;
     }
 }

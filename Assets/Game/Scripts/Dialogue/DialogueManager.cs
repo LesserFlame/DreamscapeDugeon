@@ -33,6 +33,7 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void StartDialogue(Dialogue dialogue)
     {
+        GetComponentInChildren<Canvas>().worldCamera = Camera.main;
         animator.SetBool("IsOpen", true);
         sentences.Clear();
         var player = FindAnyObjectByType<PlayerController>();
