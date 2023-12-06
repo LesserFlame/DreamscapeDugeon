@@ -4860,6 +4860,7 @@ MonoBehaviour:
   spawnDelay: 0
   deathDelay: 5
   delay: 0
+  castDuration: 0.5
   ownerTransform: 1
   owner: {fileID: 0}
   deathEffect: {fileID: 7466170778154516174, guid: e2f3f817da1698648852a2fa8083b041, type: 3}

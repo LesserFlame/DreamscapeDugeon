@@ -15,5 +15,5 @@ MonoBehaviour:
   actionName: Bash
   damage: 2
   manaCost: 0
-  effect: {fileID: 0}
+  effect: {fileID: -3344452184637961838, guid: 61472d5accc529842b53e7a3362beed6, type: 3}
   category: 1

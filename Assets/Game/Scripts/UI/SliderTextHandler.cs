@@ -14,8 +14,8 @@ public class SliderTextHandler : MonoBehaviour
     [SerializeField] private float speed = 2;
     [SerializeField] private bool percentage = false;
 
-    private float trueValue = 0;
-    private float currentValue = 0;
+    public float trueValue = 0;
+    public float currentValue = 0;
     private float maxValue = 0;
     public void SetValue(float value, float maxValue)
     {
@@ -36,12 +36,15 @@ public class SliderTextHandler : MonoBehaviour
     }
     private void Update()
     {
+        //if (currentValue < 1 && currentValue > 0) currentValue = 1;
+        if (currentValue < 1 && trueValue == 0) currentValue = 0; //don't want to linger in death with 1 hp
+        float tempValue = currentValue;
         currentValue = Mathf.Lerp(currentValue, trueValue, speed * Time.deltaTime);
+        if (tempValue == currentValue) currentValue = trueValue;
         slider.value = currentValue;
-        if (!percentage) textObject.text = displayText + (int)currentValue + " / " + maxValue;
+        if (!percentage) textObject.text = displayText + Mathf.CeilToInt(currentValue) + " / " + maxValue;
         else textObject.text = (int)(currentValue * 100) + "%";
 
-        //if (currentValue < 1) currentValue = 0;
         //if (currentValue > maxValue - 1) currentValue = maxValue;
     }
 }

@@ -9,22 +9,22 @@ public class EnemyMovement : MonoBehaviour
 {
     private EnemyDetection detection;
     private Rigidbody2D rb;
-    private new SpriteRenderer renderer;
+    private SpriteRenderer spriteRenderer;
     [SerializeField] private float chaseForce = 1.0f;
     private void Start()
     {
         detection = GetComponent<EnemyDetection>();
         rb = GetComponent<Rigidbody2D>();
-        renderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     // Update is called once per frame
     void FixedUpdate()
     {
         if(detection.playerDetected)
         {
-            renderer.enabled = true;
+            spriteRenderer.enabled = true;
             rb.AddForce(detection.targetDirection * chaseForce);
         }
-        else renderer.enabled = false;
+        else spriteRenderer.enabled = false;
     }
 }

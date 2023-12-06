@@ -9,6 +9,7 @@ public class BattleActionData : ScriptableObject
     public string actionName;
     public float damage;
     public float manaCost;
+    //public float duration;
     //animation and other stuff
     [Header("Battle Effect")]
     public BattleEffect effect;

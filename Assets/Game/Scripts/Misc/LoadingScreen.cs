@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
+//using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,6 +28,8 @@ public class LoadingScreen : Singleton<LoadingScreen>
     }
     private void LoadScene()
     {
+        if (MusicManager.Instance != null) { MusicManager.Instance.FadeSong(animationLength); }
+       
         loadingBar.SetValue(0, 1);
         StartCoroutine(LoadSceneAsync(currentSceneID));
     }

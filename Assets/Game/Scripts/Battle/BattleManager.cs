@@ -17,7 +17,7 @@ public class BattleManager : Singleton<BattleManager>
     [SerializeField] public PlayerActor player;
     [SerializeField] public List<EnemyActor> enemies;
     [SerializeField] public List<EnemyActor> activeEnemies;
-    private List<BattleActor> actorOrder = new List<BattleActor>();
+    public List<BattleActor> actorOrder = new List<BattleActor>();
 
     [Header("UI")]
     [SerializeField] private BattleUIManager ui;
@@ -72,7 +72,7 @@ public class BattleManager : Singleton<BattleManager>
             case BattleState.BATTLE_START:
                 if (musicPlayer != null)
                 {
-                    musicPlayer.PlaySong();
+                    Invoke("PlayBattleMusic", 1.01f);
                 }
                 ui.HideAll();
                 ui.detectInput = false;
@@ -110,7 +110,7 @@ public class BattleManager : Singleton<BattleManager>
                 //if (stateTimer <= 0)
                 {
                     OnEnemyAction();
-                    actorOrder.RemoveAt(0); 
+                    if (actorOrder.Count > 0) actorOrder.RemoveAt(0); 
                     state = BattleState.BATTLE_NEXTTURN;
                 }
                 break;
@@ -118,19 +118,23 @@ public class BattleManager : Singleton<BattleManager>
                 OnCalculateTurns();
                 break;
             case BattleState.BATTLE_NEXTTURN:
-                if (player.HP <= 0) state = BattleState.BATTLE_STOP;
-                if(actorOrder.Count <= 0) 
+                if (stateTimer <= 0 )
                 {
-                    state = BattleState.BATTLE_TURNORDER;
-                    break;
+                    if (player.HP <= 0) state = BattleState.BATTLE_STOP;
+                    if(actorOrder.Count <= 0) 
+                    {
+                        state = BattleState.BATTLE_TURNORDER;
+                        break;
+                    }
+                    if (actorOrder[0].CompareTag("Player"))
+                    {
+                        ui.OnShowButtons();
+                        ui.OnSelectButton(0);
+                        ui.OnPlaySound(3);
+                        state = BattleState.PLAYER_DECISION;
+                    }
+                    else state = BattleState.ENEMY_DECISION;
                 }
-                if (actorOrder[0].CompareTag("Player"))
-                {
-                    ui.OnShowButtons();
-                    ui.OnSelectButton(0);
-                    state = BattleState.PLAYER_DECISION;
-                }
-                else state = BattleState.ENEMY_DECISION;
                 break;
             case BattleState.BATTLE_WAIT:
                 if (stateTimer <= 0) state = nextState;
@@ -138,7 +142,8 @@ public class BattleManager : Singleton<BattleManager>
             case BattleState.BATTLE_STOP:
                 //decide win / loss
                 //active = false;
-                Invoke("ResetBattle", 3);
+                //Invoke("ResetBattle", 3);
+                actorOrder.Clear();
                 ui.HideAll();
                 if (stateTimer <= 0 && victory) state = BattleState.BATTLE_WON;
                 if (stateTimer <= 0 && !victory) state = BattleState.BATTLE_LOST;
@@ -155,9 +160,10 @@ public class BattleManager : Singleton<BattleManager>
                 //game over, send back to home
                 state = BattleState.BATTLE_INACTIVE;
                 //GameManager.Instance.TransitionScreen();
-                GameManager.Instance.BattleTransition();
+                //GameManager.Instance.BattleTransition();
                 //SceneManager.LoadScene("House");
                 LoadingScreen.Instance.LoadScene(1);
+                Invoke("ResetBattle", 3);
                 break;
             default:
                 break;
@@ -187,11 +193,14 @@ public class BattleManager : Singleton<BattleManager>
         state = BattleState.BATTLE_START;
 
         player.actions = GameManager.Instance.player.actions;
+        ui.options[2] = activeEnemies.Count;
+
+        ui.ActivateFireLight(true);
     }
-    public void OnPlayerDecide()
+    public void OnPlayerDecide(float wait)
     {
         state = BattleState.PLAYER_ACTION;
-        stateTimer = 1;
+        stateTimer = wait;
         //Debug.Log(state);
     }
     public void OnPlayerAction()
@@ -215,34 +224,53 @@ public class BattleManager : Singleton<BattleManager>
     {
         //ui.OnShowButtons(true);
         //ui.OnSelectButton(0);
-        actorOrder[0].OnDecide();
+        if (actorOrder.Count > 0) actorOrder[0].OnDecide();
         //actorOrder.RemoveAt(0);
+        stateTimer = 1;
         state = BattleState.BATTLE_NEXTTURN;
     }
     public void OnEnemyDeath()
-    { 
-        if (activeEnemies.Count <= 0) 
+    {
+        ui.options[2] = activeEnemies.Count;
+        if (activeEnemies.Count <= 0)
         {
+            MusicManager.Instance.FadeSong();
             active = false;
-            state = BattleState.BATTLE_STOP; 
+            state = BattleState.BATTLE_STOP;
             stateTimer = 3;
             victory = true;
+        }
+        //else
+        {//actorOrder.Remove();//OnCalculateTurns();
+            foreach (var actor in actorOrder)
+            {
+                if (!actor.isActiveAndEnabled)
+                {
+                    actorOrder.Remove(actor);
+                    break;
+                }
+            }
         }
     }
     public void OnPlayerDeath()
     {
+        MusicManager.Instance.FadeSong();
         active = false;
+        ui.HideAll();
         stateTimer = 4;
         state = BattleState.BATTLE_STOP;
         victory = false;
         player.initialized = false;
         //GameManager.Instance.TransitionScreen();
+
+        ui.ActivateFireLight(false);
     }    
     public void OnPlayerFlee()
     {
+        MusicManager.Instance.FadeSong(1);
         active = false;
         victory = false;
-        Invoke("ResetBattle", 2);
+        //Invoke("ResetBattle", 2);
         state = BattleState.BATTLE_INACTIVE;
         GameManager.Instance.BattleTransition();
         //GameManager.Instance.TransitionScreen();
@@ -276,6 +304,7 @@ public class BattleManager : Singleton<BattleManager>
             {
                 ui.OnShowButtons(true);
                 ui.OnSelectButton(0);
+                ui.OnPlaySound(3);
                 state = BattleState.PLAYER_DECISION;
             }
             else state = BattleState.ENEMY_DECISION;
@@ -284,9 +313,17 @@ public class BattleManager : Singleton<BattleManager>
     }
     public void ResetBattle()
     {
+        //Debug.Log("Reset");
         active = false;
         activeEnemies.Clear();
         foreach (var enemy in enemies) enemy.gameObject.SetActive(false);
         ui.detectInput = false;
+        GameManager.Instance.inBattle = false;
+        //player.initialized = false;
+    }
+
+    private void PlayBattleMusic()
+    {
+        musicPlayer.PlaySong();
     }
 }

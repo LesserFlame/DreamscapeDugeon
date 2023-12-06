@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 88
       width: 14
       height: 33
-    spriteID: a74d308a0400fd14eabb7be86f3a7e1d
+    spriteID: c8cb4cca4058b2040864a99dabf767a8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 34
-    spriteID: 8b6058f8ece84ac4990e61c1efdee46a
+    spriteID: 7317bcbebbc08454ea1aff285c24550d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 33
-    spriteID: b63ca5e741efc0d49bce2121986c9696
+    spriteID: 5d044bb7fbe4a5342b035e57ed011e2f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 46
       width: 14
       height: 34
-    spriteID: 42fb3ffad1498d24ba09c5eb1a1671fd
+    spriteID: b60b76597a20ee147b291ffab27fad76
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -215,7 +215,7 @@ ScriptedImporter:
         y: 12
         width: 14
         height: 33
-      spriteId: a74d308a0400fd14eabb7be86f3a7e1d
+      spriteId: c8cb4cca4058b2040864a99dabf767a8
     - name: Emberlynn_Down_Frame_1
       frameIndex: 1
       cellRect:
@@ -223,7 +223,7 @@ ScriptedImporter:
         y: 10
         width: 14
         height: 34
-      spriteId: 8b6058f8ece84ac4990e61c1efdee46a
+      spriteId: 7317bcbebbc08454ea1aff285c24550d
     - name: Emberlynn_Down_Frame_2
       frameIndex: 2
       cellRect:
@@ -231,7 +231,7 @@ ScriptedImporter:
         y: 12
         width: 14
         height: 33
-      spriteId: b63ca5e741efc0d49bce2121986c9696
+      spriteId: 5d044bb7fbe4a5342b035e57ed011e2f
     - name: Emberlynn_Down_Frame_3
       frameIndex: 3
       cellRect:
@@ -239,7 +239,7 @@ ScriptedImporter:
         y: 10
         width: 14
         height: 34
-      spriteId: 42fb3ffad1498d24ba09c5eb1a1671fd
+      spriteId: b60b76597a20ee147b291ffab27fad76
     linkedCells: []
     parentIndex: -1
   platformSettings: []

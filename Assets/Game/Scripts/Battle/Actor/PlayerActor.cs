@@ -8,6 +8,9 @@ public class PlayerActor : BattleActor
     public Transform spellTransform;
     [HideInInspector] public bool infusion = true;
     [HideInInspector] public bool pyroRebirth = true;
+    public BattleAction action;
+    public Animator animator;
+    
     private void Awake()
     {
         GetComponent<BattleAction>().owner = this;
@@ -16,26 +19,40 @@ public class PlayerActor : BattleActor
     }
     public override void OnTakeDamage(float damage)
     {
+        //Debug.Log("Ouch" + damage);
         float tempHP = HP;
         base.OnTakeDamage(damage);
         BattleUIManager.Instance.OnSliderChanged(0, HP, maxHP);
-
+        if (tempHP != HP) { animator.SetBool("Hurt", true); }
         if (infusion)
         {
             OnManaChange((tempHP - HP));
         }
-        
+
         if (HP <= 0) { OnDeath(); }
+        //else Invoke("ResetHurt", 0.01f);
     }
     public override void OnDeath()
     {
         //base.OnDeath();
+        animator.SetBool("Dead", true);
         BattleManager.Instance.OnPlayerDeath();
     }
 
     public override void OnDecide()
     {
-        //nothing
+        animator.SetBool("Casting", true);
+    }
+    public void PerformAction()
+    {
+        action.Perform();
+        Invoke("StopCasting", action.data.effect.castDuration);
+        animator.SetBool("StaffEquip", false);
+    }
+    public void StopCasting()
+    {
+        //Debug.Log("Stop");
+        animator.SetBool("Casting", false);
     }
     public void OnManaChange(float mana, bool increase = true)
     {
@@ -62,7 +79,10 @@ public class PlayerActor : BattleActor
             infusion = player.data.SKILLS[0];
             pyroRebirth = player.data.SKILLS[1];
 
+            actions = player.actions;
+
             initialized = true;
+            animator.SetBool("Dead", false);
         }
     }
     public void OnUpdateStats(PlayerController player)
@@ -79,5 +99,10 @@ public class PlayerActor : BattleActor
 
         BattleUIManager.Instance.OnSliderChanged(0, HP, maxHP, false);
         BattleUIManager.Instance.OnSliderChanged(1, MP, maxMP, false);
+    }
+
+    private void ResetHurt()
+    {
+        animator.SetBool("Hurt", false);
     }
 }

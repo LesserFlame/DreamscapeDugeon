@@ -121,14 +121,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Emberlynn_Battle_StaffIdle
     originalName: 
-    pivot: {x: 0.5535714, y: -0.3}
+    pivot: {x: 0.5, y: -0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 28
+      width: 25
       height: 40
     spriteID: b8735f7358a8ed443bccf5146ddd5884
     spriteBone: []
@@ -139,6 +139,66 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Emberlynn_Battle_StaffIdle_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 52
+      width: 25
+      height: 40
+    spriteID: 2ff2006725f2f5845b38d2839333a717
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 52}
+  - name: Emberlynn_Battle_StaffIdle_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 37
+      y: 4
+      width: 25
+      height: 40
+    spriteID: 8f5add12b98c8bc418e1012e30d9f419
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 37, y: 4}
+  - name: Emberlynn_Battle_StaffIdle_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 37
+      y: 52
+      width: 25
+      height: 40
+    spriteID: ddc32e15f5eb7c24697bf10e802348d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 37, y: 52}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -148,14 +208,38 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Emberlynn_Battle_StaffIdle
+    - name: Emberlynn_Battle_StaffIdle_Frame_0
       frameIndex: 0
       cellRect:
-        x: 3
+        x: 6
         y: 12
-        width: 28
+        width: 25
         height: 40
       spriteId: b8735f7358a8ed443bccf5146ddd5884
+    - name: Emberlynn_Battle_StaffIdle_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 6
+        y: 12
+        width: 25
+        height: 40
+      spriteId: 2ff2006725f2f5845b38d2839333a717
+    - name: Emberlynn_Battle_StaffIdle_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 6
+        y: 12
+        width: 25
+        height: 40
+      spriteId: 8f5add12b98c8bc418e1012e30d9f419
+    - name: Emberlynn_Battle_StaffIdle_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 6
+        y: 12
+        width: 25
+        height: 40
+      spriteId: ddc32e15f5eb7c24697bf10e802348d8
     linkedCells: []
     parentIndex: -1
   platformSettings: []

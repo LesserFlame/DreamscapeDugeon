@@ -25,7 +25,8 @@ public class GameManager : Singleton<GameManager>
     
     public void BattleTransition(EnemyInfo instagator)
     {
-
+        if (MusicManager.Instance != null) { MusicManager.Instance.FadeSong(1); }
+        player.GetComponent<Collider2D>().isTrigger = true;
         List<EnemyData> tempData = new List<EnemyData>();
         var room = instagator.GetComponentInParent<PrefabContainer>();
         foreach (var enemy in room.GetComponentsInChildren<EnemyInfo>())
@@ -57,7 +58,10 @@ public class GameManager : Singleton<GameManager>
         //Debug.Log(player.LVL);
         SaveSystem.SavePlayer(player);
         //Debug.Log("Exit");
-        if (!inBattle) dungeonMusic.PlaySong();
+        //if (dungeonMusic == null) FindAnyObjectByType<MusicPlayer>();
+        if (!inBattle && dungeonMusic != null) Invoke("PlayDungeonMusic", 1.01f);
+        player.GetComponent<Collider2D>().isTrigger = inBattle;
+        if (!inBattle) BattleManager.Instance.ResetBattle();
     }
     public void TransitionScreen()
     {
@@ -77,5 +81,10 @@ public class GameManager : Singleton<GameManager>
     {
         if (battleCamera != null) battleCamera.gameObject.SetActive(false);
         //mainCamera.gameObject.SetActive(true);
+    }
+
+    private void PlayDungeonMusic()
+    {
+        if (!inBattle) { dungeonMusic.PlaySong(); }
     }
 }

@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine;
 
-[RequireComponent(typeof(AnimatorController))]
+[RequireComponent(typeof(Animator))]
 public class PlayOnceAnimation : MonoBehaviour
 {
     private Animator animator;

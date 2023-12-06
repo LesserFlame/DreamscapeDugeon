@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
+//using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,6 +28,7 @@ public class TransitionScreen : MonoBehaviour
         isOpen = !isOpen;
         if (animator == null) animator = GetComponent<Animator>();
         animator.SetBool("IsOpen", isOpen);
+
+        //if (!isOpen ) { if (MusicManager.Instance != null) { MusicManager.Instance.FadeSong(animationLength); } }
     }
-    
 }

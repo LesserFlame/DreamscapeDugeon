@@ -1501,6 +1501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2051894057674200872}
   optionName: {fileID: 7387494806111314547}
+  selectable: 1
 --- !u!1 &2462616166208289314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +2117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2203021719496665564}
   optionName: {fileID: 5064496535209303531}
+  selectable: 1
 --- !u!1 &3522416500550382828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3492,6 +3494,10 @@ MonoBehaviour:
   displayText: 'HP: '
   textObject: {fileID: 294318864890337203}
   slider: {fileID: 5565536838676235071}
+  speed: 2
+  percentage: 0
+  trueValue: 0
+  currentValue: 0
 --- !u!1 &6555677350743147557
 GameObject:
   m_ObjectHideFlags: 0
@@ -3809,6 +3815,10 @@ MonoBehaviour:
   displayText: 'FP: '
   textObject: {fileID: 7737008516451579041}
   slider: {fileID: 8710364177081189685}
+  speed: 2
+  percentage: 0
+  trueValue: 0
+  currentValue: 0
 --- !u!1 &7778274568083218985
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,6 +3866,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 6672746744378764800}
   dialogueText: {fileID: 3716358907776719126}
+  typingSound: {fileID: 7587161647211727183, guid: 0404340b90bd4704b983d0c2e9c432e4, type: 3}
+  soundPerCharacter: 4
   animator: {fileID: 7755098610000670590}
   pauseCharacters: 21003f002e002c003a00
 --- !u!1 &7955092209319080230
@@ -4145,6 +4157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 9192837881451131058}
   optionName: {fileID: 5971453750539374223}
+  selectable: 1
 --- !u!1 &8390967621505428456
 GameObject:
   m_ObjectHideFlags: 0
@@ -4553,6 +4566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 9000711647877997045}
   optionName: {fileID: 3449395836557026066}
+  selectable: 1
 --- !u!1 &8907015312093748788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4690,3 +4704,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 6055540488388964470}
   optionName: {fileID: 344804212253866571}
+  selectable: 1

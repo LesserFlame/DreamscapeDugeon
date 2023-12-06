@@ -60,7 +60,7 @@ public class AudioSourceController : MonoBehaviour
 
 	public void Stop()
 	{
-		audioSource.Stop();
+		if (audioSource != null) audioSource.Stop();
 		Reset();
 		AudioManager.Instance.ReturnController(this);
 	}
@@ -70,4 +70,29 @@ public class AudioSourceController : MonoBehaviour
 		active = false;
 		parent = null;
 	}
+
+	public void FadeVolume(float duration = 3)
+	{
+		StartCoroutine(FadeOut(duration));
+	}
+
+	private IEnumerator FadeOut(float duration)
+	{
+		if (audioSource != null)
+		{
+			float startVolume = audioSource.volume;
+
+			// Calculate the step size for volume reduction over time
+			float step = startVolume / duration;
+
+			while (audioSource.volume > 0)
+			{
+				audioSource.volume -= step * Time.deltaTime;
+				yield return null;
+			}
+
+			// Ensure the volume is set to zero
+			audioSource.volume = 0f;
+		}
+    }
 }

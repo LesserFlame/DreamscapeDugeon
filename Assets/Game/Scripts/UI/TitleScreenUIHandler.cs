@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class TitleScreenUIHandler : MonoBehaviour
 {
     [SerializeField] private List<GameObject> buttons;
-
+    [SerializeField] private List<GameObject> menuSounds;
     [HideInInspector] public bool detectInput = true;
 
     private int menuOption = -1;
@@ -28,21 +28,34 @@ public class TitleScreenUIHandler : MonoBehaviour
         int oldOption = menuOption;
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            Instantiate(menuSounds[0]);
             menuOption++;
             if (menuOption >= buttons.Count) menuOption = 0;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            Instantiate(menuSounds[0]);
             menuOption--;
             if (menuOption < 0) menuOption = buttons.Count - 1;
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            
             switch (menuOption)
             {
-                case 0: LoadingScreen.Instance.LoadScene(1); break;
-                case 2: Application.Quit(); Debug.Log("Quit"); break;
+                case 0: 
+                    LoadingScreen.Instance.LoadScene(1);
+                    Instantiate(menuSounds[1]);
+                    break;
+                case 1:
+                    Instantiate(menuSounds[4]);
+                    break;
+                case 2: 
+                    Application.Quit();
+                    Instantiate(menuSounds[1]);
+                    //Debug.Log("Quit"); 
+                    break;
             }
         }
 

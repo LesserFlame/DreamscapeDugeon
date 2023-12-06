@@ -16,8 +16,9 @@ public class BattleUIManager : Singleton<BattleUIManager>
     [SerializeField] private float actionDelay = 1;
     [SerializeField] private GameObject spellFX; 
 
-    [SerializeField] private List<int> options; 
+    [SerializeField] public List<int> options; 
     [SerializeField] private List<GameObject> menuSounds; 
+    [SerializeField] private FireLight fireLight; 
 
     private BattleAction playerAction;
 
@@ -29,6 +30,7 @@ public class BattleUIManager : Singleton<BattleUIManager>
     {
         playerAction = BattleManager.Instance.player.GetComponent<BattleAction>();
         HideAll();
+        active = false;
     }
     private void Update()
     {
@@ -43,13 +45,13 @@ public class BattleUIManager : Singleton<BattleUIManager>
         bool updateMenus = true;
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Instantiate(menuSounds[0]);
+            OnPlaySound(0);
             menuOption++;
             if (menuOption >= options[menuLayer]) menuOption = 0;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Instantiate(menuSounds[0]);
+            OnPlaySound(0);
             menuOption--;
             if (menuOption < 0) menuOption = options[menuLayer]-1;
         }
@@ -59,17 +61,18 @@ public class BattleUIManager : Singleton<BattleUIManager>
             bool swap = true;
             if (menuOption == 0 && menuLayer == 0 && swap)
             {
-                Instantiate(menuSounds[1]);
+                OnPlaySound(1);
                 menuLayer = 1;
                 menuOption = 0;
                 //optionsMenu.UpdateDisplayOptions();
+                BattleManager.Instance.player.animator.SetBool("StaffEquip", true);
                 OnHighlightOptions(menuOption);
                 swap = false;
             }
-            if (menuOption == 1 && menuLayer == 0 && swap) Instantiate(menuSounds[4]);
+            if (menuOption == 1 && menuLayer == 0 && swap) OnPlaySound(4);
             if (menuOption == 2 && menuLayer == 0 && swap)
             {
-                Instantiate(menuSounds[1]);
+                OnPlaySound(1);
                 BattleManager.Instance.OnPlayerFlee();
                 swap = false;
             }
@@ -78,53 +81,66 @@ public class BattleUIManager : Singleton<BattleUIManager>
                 playerAction.data = optionsMenu.battleActions[menuOption];
                 if (BattleManager.Instance.player.MP >= playerAction.data.manaCost)
                 {
-                    Instantiate(menuSounds[1]);
+                    OnPlaySound(1);
                     menuLayer = 2;
                     menuOption = 0;
                     swap = false;
                 }
-                else Instantiate(menuSounds[4]);
+                else OnPlaySound(4);
             }
             if (menuLayer == 2 && swap)
             {
                 if (BattleManager.Instance.player.MP >= playerAction.data.manaCost)
                 {
-                    Instantiate(menuSounds[1]);
+                    fireLight.destination = fireLight.startingPosition;
+                    OnPlaySound(1);
                     playerAction.target = BattleManager.Instance.activeEnemies[menuOption];
                     Invoke("PerformAction", actionDelay);
+                    //PerformAction();
                     Instantiate(spellFX, BattleManager.Instance.player.spellTransform);
                     menuLayer = 0;
                     menuOption = 0;
                     updateMenus = false;
-                    BattleManager.Instance.OnPlayerDecide();
+                    BattleManager.Instance.OnPlayerDecide(playerAction.data.effect.castDuration + 1);
                 }
-                else Instantiate(menuSounds[4]);
+                else OnPlaySound(4);
             }
             //menuOption = 0;
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
-            if (menuLayer != 0)Instantiate(menuSounds[2]);
+            if (menuLayer != 0)OnPlaySound(2);
             menuLayer--;
             if (menuLayer < 0) menuLayer = 0;
             menuOption = 0;
+
+            if (menuLayer == 0) BattleManager.Instance.player.animator.SetBool("StaffEquip", false);
         }
         if (Input.anyKeyDown && updateMenus)
         {
             switch (menuLayer)
             {
                 case 0:
+                    fireLight.destination = fireLight.startingPosition;
                     OnShowButtons();
                     OnSelectButton(menuOption, true);
                     OnShowOptions(false);
                     break;
                 case 1:
+                    fireLight.destination = fireLight.startingPosition;
                     OnShowButtons(false);
                     OnShowOptions();
                     optionsMenu.ChangeMenuList(menuLayer - 1);
                     OnHighlightOptions(menuOption);
                     break;
                 case 2:
+                    fireLight.destination = BattleManager.Instance.activeEnemies[menuOption].transform.position;
+                    var spriteHeight = (BattleManager.Instance.activeEnemies[menuOption].GetComponent<SpriteRenderer>().bounds.size.y);
+                    //Debug.Log(spriteHeight);
+                    
+                    fireLight.destination.y += spriteHeight;
+                    fireLight.destination.y += spriteHeight * 0.1f;
+                    if (spriteHeight < 0.5f) fireLight.destination.y += 1; 
                     OnShowButtons(false);
                     OnShowOptions();
                     optionsMenu.ChangeMenuList(menuLayer - 1);
@@ -135,7 +151,11 @@ public class BattleUIManager : Singleton<BattleUIManager>
     }
     public void PerformAction()
     {
-        playerAction.Perform();
+        //playerAction.Perform();
+        var player = BattleManager.Instance.player;
+        player.action = playerAction;
+        BattleManager.Instance.player.OnDecide();
+        //BattleManager.Instance.player.animator.SetBool("StaffEquip", false);
     }
     public void OnSliderChanged(int id, float value, float maxValue, bool lerp = true)
     {
@@ -165,6 +185,10 @@ public class BattleUIManager : Singleton<BattleUIManager>
         {
             buttons[id].GetComponent<Animator>().SetBool("Selected", select);
         }
+    }
+    public void OnPlaySound(int id)
+    {
+        Instantiate(menuSounds[id]);
     }
     public void OnShowOptions(bool show = true)
     {
@@ -202,5 +226,10 @@ public class BattleUIManager : Singleton<BattleUIManager>
         menuLayer = 0;
         menuOption = 0;
         active = false;
+    }
+
+    public void ActivateFireLight(bool active = true)
+    {
+        fireLight.gameObject.SetActive(active);
     }
 }

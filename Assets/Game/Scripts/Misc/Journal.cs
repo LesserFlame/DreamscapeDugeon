@@ -7,7 +7,9 @@ public class Journal : Interactable
 {
     public override void OnInteract()
     {
-        base.OnInteract();
-       FindFirstObjectByType<SkillTree>().OpenJournal();
+       base.OnInteract();
+       var skilltree = FindFirstObjectByType<SkillTree>();
+       skilltree.OpenJournal();
+       skilltree.SetAttentionGrabActive(false);
     }
 }

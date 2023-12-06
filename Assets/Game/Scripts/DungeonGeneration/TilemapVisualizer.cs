@@ -85,9 +85,9 @@ public class TilemapVisualizer : MonoBehaviour
 
     public bool CheckEmpty(RoomInfo room, Vector2Int position)
     {
-        for (int x = room.floorTilemap.cellBounds.x - 1; x < room.floorTilemap.cellBounds.xMax + 1; x++)
+        for (int x = room.floorTilemap.cellBounds.x - 2; x < room.floorTilemap.cellBounds.xMax + 2; x++)
         {
-            for (int y = room.floorTilemap.cellBounds.y - 1; y < room.floorTilemap.cellBounds.yMax + 1; y++)
+            for (int y = room.floorTilemap.cellBounds.y - 2; y < room.floorTilemap.cellBounds.yMax + 2; y++)
             {
                 Vector3Int cellPosition = new Vector3Int(x, y, 0);
 
@@ -100,9 +100,9 @@ public class TilemapVisualizer : MonoBehaviour
                 }
             }
         }
-        for (int x = room.wallTilemap.cellBounds.x - 1; x < room.wallTilemap.cellBounds.xMax + 1; x++)
+        for (int x = room.wallTilemap.cellBounds.x - 2; x < room.wallTilemap.cellBounds.xMax + 2; x++)
         {
-            for (int y = room.wallTilemap.cellBounds.y - 1; y < room.wallTilemap.cellBounds.yMax + 1; y++)
+            for (int y = room.wallTilemap.cellBounds.y - 2; y < room.wallTilemap.cellBounds.yMax + 2; y++)
             {
                 Vector3Int cellPosition = new Vector3Int(x, y, 0);
 
@@ -115,9 +115,9 @@ public class TilemapVisualizer : MonoBehaviour
                 }
             }
         }
-        for (int x = room.overlayTilemap.cellBounds.x - 1; x < room.overlayTilemap.cellBounds.xMax + 1; x++)
+        for (int x = room.overlayTilemap.cellBounds.x - 2; x < room.overlayTilemap.cellBounds.xMax + 2; x++)
         {
-            for (int y = room.overlayTilemap.cellBounds.y; y < room.overlayTilemap.cellBounds.yMax + 1; y++)
+            for (int y = room.overlayTilemap.cellBounds.y - 2; y < room.overlayTilemap.cellBounds.yMax + 2; y++)
             {
                 Vector3Int cellPosition = new Vector3Int(x, y, 0);
 

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EmberIdle
+  m_Name: StaffIdle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 7777318440453496387, guid: 0f03b7593d4c3534f92aaa7f1fbf2ec1, type: 3}
+      value: {fileID: 5046957299865797441, guid: 29e33aee6c0727f419992737ee1b7ca3, type: 3}
     - time: 0.16666667
-      value: {fileID: 2071741598, guid: 0f03b7593d4c3534f92aaa7f1fbf2ec1, type: 3}
+      value: {fileID: -5904568647718475913, guid: 29e33aee6c0727f419992737ee1b7ca3, type: 3}
     - time: 0.33333334
-      value: {fileID: -453700550, guid: 0f03b7593d4c3534f92aaa7f1fbf2ec1, type: 3}
+      value: {fileID: -1097760124066381877, guid: 29e33aee6c0727f419992737ee1b7ca3, type: 3}
     - time: 0.5
-      value: {fileID: 117254485, guid: 0f03b7593d4c3534f92aaa7f1fbf2ec1, type: 3}
+      value: {fileID: -8690837844603334030, guid: 29e33aee6c0727f419992737ee1b7ca3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 7777318440453496387, guid: 0f03b7593d4c3534f92aaa7f1fbf2ec1, type: 3}
-    - {fileID: 2071741598, guid: 0f03b7593d4c3534f92aaa7f1fbf2ec1, type: 3}
-    - {fileID: -453700550, guid: 0f03b7593d4c3534f92aaa7f1fbf2ec1, type: 3}
-    - {fileID: 117254485, guid: 0f03b7593d4c3534f92aaa7f1fbf2ec1, type: 3}
+    - {fileID: 5046957299865797441, guid: 29e33aee6c0727f419992737ee1b7ca3, type: 3}
+    - {fileID: -5904568647718475913, guid: 29e33aee6c0727f419992737ee1b7ca3, type: 3}
+    - {fileID: -1097760124066381877, guid: 29e33aee6c0727f419992737ee1b7ca3, type: 3}
+    - {fileID: -8690837844603334030, guid: 29e33aee6c0727f419992737ee1b7ca3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 97725756495561612}
   - component: {fileID: 5938426450863487425}
   - component: {fileID: 2865237816510086361}
+  - component: {fileID: 9172849037547661915}
   m_Layer: 0
   m_Name: FireLight
   m_TagString: Untagged
@@ -1049,7 +1050,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.4
+      scalar: 0.38
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4891,6 +4892,21 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &9172849037547661915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194718040480564726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b8f7b4f3f0ccc4a8176427f9800f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  startingPosition: {x: 0, y: 0, z: 0}
+  speed: 0.9
 --- !u!1 &6497337939699585861
 GameObject:
   m_ObjectHideFlags: 0

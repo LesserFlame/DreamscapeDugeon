@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 //using UnityEditor.Animations;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ public class EnemyData : ScriptableObject
     public float speed = 2;
     public int rewardXP = 100;
 
-    public AnimatorController animator;
+    public RuntimeAnimatorController animator;
     public List<BattleActionData> actions;
 }
 

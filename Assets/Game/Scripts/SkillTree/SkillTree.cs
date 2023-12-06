@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class SkillTree : MonoBehaviour//Singleton<SkillTree>
@@ -26,6 +26,9 @@ public class SkillTree : MonoBehaviour//Singleton<SkillTree>
     [SerializeField] private TextMeshProUGUI skillDescriptionText;
     [SerializeField] private TextMeshProUGUI skillPointsText;
     [SerializeField] private Animator journalAnimator;
+    [SerializeField] private GameObject attentionGrabber;
+
+    [SerializeField] private List<GameObject> menuSounds;
 
     private int selectedSkill = 0;
     private PlayerController player;
@@ -38,6 +41,7 @@ public class SkillTree : MonoBehaviour//Singleton<SkillTree>
         
 
         //levelSlider = FindAnyObjectByType<SliderTextHandler>();
+        //if (attentionGrabber != null) attentionGrabber.SetActive(false);
         UpdateUI();
     }
     public void Awake()
@@ -65,6 +69,7 @@ public class SkillTree : MonoBehaviour//Singleton<SkillTree>
         //        Debug.Log(skill.id + ": " + player.data.SKILLS[skill.id]);
         //    }
         //}
+        SetAttentionGrabActive(CheckAnyUnlockable());
         UpdateUI();
     }
     private void Update()
@@ -76,20 +81,25 @@ public class SkillTree : MonoBehaviour//Singleton<SkillTree>
             {
                 if(skillList[selectedSkill].UnlockSkill())
                 {
+                    Instantiate(menuSounds[1]);
                     player.data.POINTS -= skillList[selectedSkill].skillCost;
+                    SaveSystem.SavePlayer(player);
+                    player.LoadStats();
                     UpdateUI();
                 }
+                else Instantiate(menuSounds[4]);
             }
             if (Input.GetKeyDown(KeyCode.X))
             {
+                Instantiate(menuSounds[2]);
                 OpenJournal(false);
-
             }
             if (Input.anyKeyDown)
             {
                 var input = Input.GetAxis("Vertical");
                 if (input != 0)
                 {
+                    Instantiate(menuSounds[0]);
                     skillList[selectedSkill].selected = false;
                     if (input > 0) selectedSkill--;
                     else if (input < 0) selectedSkill++;
@@ -150,6 +160,21 @@ public class SkillTree : MonoBehaviour//Singleton<SkillTree>
         journalAnimator.SetBool("IsOpen", open);
         FindAnyObjectByType<PlayerController>().detectInput = !open;
         if (!open) selectedSkill = 0;
+        else Instantiate(menuSounds[3]);
         UpdateUI();
+    }
+
+    public void SetAttentionGrabActive(bool activate = true)
+    {
+        attentionGrabber.SetActive(activate);
+    }
+    public bool CheckAnyUnlockable()
+    {
+        foreach (var skill in skillList) 
+        {
+            //Debug.Log(skill.CheckUnlockable());
+            if (skill.CheckUnlockable()) return true;
+        }
+        return false;
     }
 }

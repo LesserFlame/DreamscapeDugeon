@@ -24,6 +24,7 @@ public class EnemyActor : BattleActor
 
     public void InitializeEnemy(EnemyData data)
     {
+        //Debug.Log("initalize");
         gameObject.SetActive(true);
         actorName = data.enemyName;
         maxHP = data.maxHP;
@@ -35,6 +36,10 @@ public class EnemyActor : BattleActor
 
         animator.runtimeAnimatorController = data.animator;
         actions = data.actions;
+
+        Invoke("ResizeCollision", 0.1f);
+        
+        //gameObject.GetComponent<BoxCollider2D>().center = new Vector2((S.x / 2), 0);
     }
     public override void OnTakeDamage(float damage)
     {
@@ -59,8 +64,15 @@ public class EnemyActor : BattleActor
     public override void OnDecide()
     {
         action.data = actions[Random.Range(0, actions.Count)];
+        //Debug.Log(action.data.name);
         action.Perform();
         //BattleManager.On();
         //Debug.Log(action.data.actionName);
+    }
+
+    private void ResizeCollision()
+    {
+        Vector2 size = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+        gameObject.GetComponent<BoxCollider2D>().size = size;
     }
 }

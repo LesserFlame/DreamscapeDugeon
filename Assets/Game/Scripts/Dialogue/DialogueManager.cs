@@ -9,6 +9,8 @@ public class DialogueManager : Singleton<DialogueManager>
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public GameObject typingSound;
+    public int soundPerCharacter;
 
     public Animator animator;
     public List<char> pauseCharacters;
@@ -60,17 +62,26 @@ public class DialogueManager : Singleton<DialogueManager>
         //dialogueText.text = sentence;
         StopAllCoroutines();
         //StartCoroutine(TypeSentence(sentence));
-        StartCoroutine(TypeSentence(sentence, 0.05f));
+        StartCoroutine(TypeSentence(sentence, 0.025f));
         typing = true;
     }
     IEnumerator TypeSentence (string sentence, float speed)
     {
         dialogueText.text = "";
+        int id = 0;
+        var currentSound = Instantiate(typingSound);
         foreach (char letter in sentence.ToCharArray())
         {
             var tempSpeed = speed;
             dialogueText.text += letter;
             if (pauseCharacters.Contains(letter)) tempSpeed = (speed * 5);
+            id++;
+            if (id % soundPerCharacter == 0 && typingSound != null) 
+            {
+                Destroy(currentSound);
+                
+                currentSound = Instantiate(typingSound); 
+            }
             yield return new WaitForSeconds(tempSpeed);
         }
         typing = false;

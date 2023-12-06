@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BattleEffect : MonoBehaviour
@@ -16,6 +17,7 @@ public class BattleEffect : MonoBehaviour
     public float spawnDelay = 0;
     public float deathDelay = 1;
     public float delay = 0;
+    public float castDuration = 0;
     public bool ownerTransform = true;
 
     public BattleAction owner;
@@ -28,6 +30,11 @@ public class BattleEffect : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         deathTimer = delay;
+        if (castDuration == 0)
+        {
+            owner.ApplyDamage();
+            appliedDamage = true;
+        }
     }
     private void Update()
     {
@@ -39,8 +46,15 @@ public class BattleEffect : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        var targetCollider = collision.gameObject.GetComponent<Collider2D>();
+        targetCollider.enabled = false;
         //apply damage and destroy self
-        if (!collision.gameObject.CompareTag(tag)) owner.ApplyDamage(); appliedDamage = true;
+        if (!collision.gameObject.CompareTag(tag))
+        { 
+            owner.ApplyDamage(); 
+            appliedDamage = true; 
+        }
+
         Death();
     }
 
@@ -61,7 +75,11 @@ public class BattleEffect : MonoBehaviour
                 Instantiate(deathEffect, gameObject.transform);
             }
             Invoke("OnDestroy", deathDelay);
-            if (!appliedDamage) owner.ApplyDamage();
+            if (!appliedDamage)
+            {
+                appliedDamage = true;
+                owner.ApplyDamage();
+            }
             isDead = true;
         }
     }

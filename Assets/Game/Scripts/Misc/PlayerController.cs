@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -8,7 +9,7 @@ using UnityEngine.Animations;
 public class PlayerController : MonoBehaviour
 {
     public Transform interactor;
-    public Transform fireLight;
+    public FireLight fireLight;
     public float overlapRadius = 0.1f;
     public bool detectInput = true;
     public bool loadStats = false;
@@ -39,10 +40,14 @@ public class PlayerController : MonoBehaviour
     public int DEF;
     public PlayerData data;
     //[SerializeField] private bool hasLeftSprite;
-    private int requiredXP;
+    public int requiredXP;
     private int requiredSkillXP;
     [SerializeField] private LevelConfig levelConfig;
     [SerializeField] private LevelConfig skillLevelConfig;
+
+    [SerializeField] private GameObject failedSound;
+
+    private Vector3 prevPos;
 
     private void Start()
     {
@@ -59,6 +64,7 @@ public class PlayerController : MonoBehaviour
         CalculateRequiredXP();
         StartingStats();
         GameManager.Instance.ResetCameras();
+        BattleManager.Instance.player.OnInitialize(this);
     }
 
     private void Update()
@@ -77,12 +83,33 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                var stats = FindAnyObjectByType<StatsScreenHandler>();
+                if (stats != null)
+                {
+                    stats.OpenStatsMenu();
+                    detectInput = false;
+                }
+                else
+                {
+                    if (failedSound != null) Instantiate(failedSound);
+                }
+            }
             if (Input.GetKeyDown(KeyCode.P))
             {
                 SaveSystem.DeletePlayer();
                 LoadStats();
             }
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                data.POINTS += 10;
+                SaveSystem.SavePlayer(this);
+                LoadStats();
+            }
         }
+        if (rb.velocity.magnitude < 0.7f) isMoving = false;
+        //Debug.Log(rb.velocity.magnitude);
     }
     private void FixedUpdate()
     {
@@ -98,13 +125,15 @@ public class PlayerController : MonoBehaviour
             }
             if (x != 0f && y == 0)
             {
-                animator.Play("Right");
+                //animator.Play("RightIdle");
+                animator.SetInteger("Direction", 2);
                 sprite.flipX = x < 0;
                 if (sprite.flipX) directionId = 3; else directionId = 1;
             }
             else if (y != 0f)
             {
-                animator.Play(y > 0 ? "Up" : "Down");
+                //animator.Play(y > 0 ? "UpIdle" : "DownIdle");
+                animator.SetInteger("Direction", y > 0 ? 1 : 0);
                 if (y > 0) directionId = 2; else directionId = 0;
             }
 
@@ -116,20 +145,25 @@ public class PlayerController : MonoBehaviour
             isSprinting = Input.GetKey(KeyCode.LeftShift);
             rb.velocity = direction * (isSprinting ? sprintSpeed : speed);
 
-            if (direction.magnitude != 0)
+            var distance = Vector3.Distance(prevPos, transform.position);
+            if (rb.velocity.magnitude != 0 && distance > 0.01f)
             {
                 animator.speed = (isSprinting ? sprintAnimSpeed : animSpeed);
                 isMoving = true;
                 //lastClip = GetCurrentClipName();
+                //Debug.Log("Moving");
             }
             else
             {
-                animator.speed = 0;
+                animator.speed = 1;
                 isMoving = false;
-                //animator.Play(lastClip);
-                Invoke("ResetAnimation", 0.5f);
+            //animator.Play(lastClip);
+            //Invoke("ResetAnimation", 0.2f);
+                //ResetAnimation();
+                //Debug.Log("Not Moving");
             }
             animator.SetBool("IsMoving", isMoving);
+            //animator.SetFloat("Speed", distance);
 
             //player interactions
             switch (directionId)
@@ -137,25 +171,26 @@ public class PlayerController : MonoBehaviour
                 case 0:
                     //down
                     interactor.localPosition = new Vector3(0, -0.3f); //+ transform.position;
-                    if (fireLight != null) fireLight.localPosition = new Vector3(0.5f, 0.2f);
+                    if (fireLight != null) fireLight.destination = new Vector3(0.5f + transform.position.x, 0.2f + transform.position.y);
                     break;
                 case 1:
                     //right
                     interactor.localPosition = new Vector3(0.5f, 0.2f); //+ transform.position;
-                    if (fireLight != null) fireLight.localPosition = new Vector3(-0.5f, 0.2f);
+                    if (fireLight != null) fireLight.destination = new Vector3(-0.5f + transform.position.x, 0.2f + transform.position.y);
                 break;
                 case 2:
                     //up
                     interactor.localPosition = new Vector3(0, 0.7f); //+ transform.position;
-                    if (fireLight != null) fireLight.localPosition = new Vector3(-0.5f, 0.2f);
+                    if (fireLight != null) fireLight.destination = new Vector3(-0.5f + transform.position.x, 0.2f + transform.position.y);
                 break;
                 case 3:
                     //left
                     interactor.localPosition = new Vector3(-0.5f, 0.2f); //+ transform.position;
-                    if (fireLight != null) fireLight.localPosition = new Vector3(0.5f, 0.2f);
+                if (fireLight != null) fireLight.destination = new Vector3(0.5f + transform.position.x, 0.2f + transform.position.y);
                 break;
             }
         //}
+        prevPos = transform.position;
     }
 
 
@@ -193,7 +228,7 @@ public class PlayerController : MonoBehaviour
         value /= 4;
         data.SKILLXP += value;
 
-        if (data.SKILLXP >= requiredSkillXP)
+        if (data.SKILLXP >= requiredSkillXP && (data.SKILLLVL < skillLevelConfig.maxLVL))
         {
             while (data.SKILLXP >= requiredSkillXP)
             {
@@ -204,9 +239,12 @@ public class PlayerController : MonoBehaviour
     }
     public void SkillLevelUp()
     {
-        data.SKILLLVL++;
-        data.POINTS++;
-        CalculateRequiredSkillXP();
+        //if (data.SKILLLVL < skillLevelConfig.maxLVL)
+        {
+            data.SKILLLVL++;
+            data.POINTS++;
+            CalculateRequiredSkillXP();
+        }
         //LevelUpStats();
         //FindAnyObjectByType<PlayerActor>().OnUpdateStats(this);
     }
@@ -252,7 +290,7 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(interactor.position, overlapRadius);
     }
 
-    private void LoadStats()
+    public void LoadStats()
     {
         data = SaveSystem.LoadPlayer();
         if (totalActions != null)

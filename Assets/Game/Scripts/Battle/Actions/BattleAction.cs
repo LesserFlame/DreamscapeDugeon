@@ -20,7 +20,7 @@ public class BattleAction : MonoBehaviour
             owner.MP -= data.manaCost;
             if (owner.gameObject.CompareTag("Player")) BattleUIManager.Instance.OnSliderChanged(1, owner.MP, owner.maxMP);
         }
-        else ApplyDamage();
+        else if (data.effect == null) ApplyDamage();
         if (data.effect != null) SpawnEffect();
     }
     public void ApplyDamage()
@@ -36,16 +36,19 @@ public class BattleAction : MonoBehaviour
         BattleEffect effectRef = Instantiate(data.effect, spawnTransform.position, Quaternion.FromToRotation(owner.transform.position, target.transform.position));
         effectRef.tag = gameObject.tag;
         effectRef.owner = this;
-        if (!effectRef.ownerTransform) effectRef.transform.position = target.transform.position;
+        var targetCenter = target.GetComponent<SpriteRenderer>().bounds.center;
+        if (!effectRef.ownerTransform) effectRef.transform.position = targetCenter;
         switch (effectRef.effectType)
         {
             case BattleEffect.EffectType.PROJECTILE:
+                var targetCollider = target.GetComponent<Collider2D>();
+                targetCollider.enabled = true;
                 var rb = effectRef.gameObject.GetComponent<Rigidbody2D>();
-                Vector2 direction = target.transform.position - owner.transform.position;
+                Vector2 direction = targetCenter - effectRef.transform.position;
                 rb.AddForce(direction * data.effect.force, ForceMode2D.Impulse);
                 break;
             case BattleEffect.EffectType.ANIMATION:
-                Vector3 rotationDirection = (target.transform.position + (Vector3.up * 0.5f)) - effectRef.transform.position;
+                Vector3 rotationDirection = (targetCenter /*+ (Vector3.up * 0.5f)*/) - effectRef.transform.position;
                 rotationDirection.Normalize();
 
                 float angle = Mathf.Atan2(rotationDirection.y, rotationDirection.x) * Mathf.Rad2Deg;

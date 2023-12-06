@@ -48,7 +48,6 @@ public class Skill : MonoBehaviour
             if (player != null) 
             { 
                 player.data.SKILLS[id] = true;
-                SaveSystem.SavePlayer(player);
             }
             unlocked = true;
             return true;
@@ -59,13 +58,24 @@ public class Skill : MonoBehaviour
     {
         foreach (var skill in prerequisites)
         {
-            if (!skill.unlocked) return false;
+            if (!skill.unlocked)
+            {
+                //Debug.Log("1");
+                return false;
+            }
         }
-        if (FindFirstObjectByType<PlayerController>().data.POINTS < skillCost)
+        var data = SaveSystem.LoadPlayer();
+        //Debug.Log(data.POINTS);
+        if (data.POINTS < skillCost)
         {
+            //Debug.Log("2");
             return false;
         }
-        if (unlocked) return false;
+        if (unlocked)
+        {
+            //Debug.Log("3"); 
+            return false;
+        }
 
         return true;
     }

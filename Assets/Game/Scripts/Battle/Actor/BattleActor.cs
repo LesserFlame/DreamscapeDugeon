@@ -19,6 +19,8 @@ public abstract class BattleActor : MonoBehaviour
 
     [HideInInspector] public float tempSpeed;
 
+    public FloatingMessage damageIndicator;
+
     //public float Speed
     //{
     //    get { return speed * Random.Range(0, 10); }
@@ -30,8 +32,12 @@ public abstract class BattleActor : MonoBehaviour
         //Debug.Log(trueDamage);
         if (trueDamage <= 0) { trueDamage = 1; }
         HP -= trueDamage;
-    }
 
+        var indicator = Instantiate(damageIndicator, transform.position, Quaternion.identity);
+        indicator.SetMessage(Mathf.CeilToInt(trueDamage).ToString());
+        indicator.moveLeft = !gameObject.CompareTag("Player");
+    }
+    
     public virtual void OnDeath()
     {
         gameObject.SetActive(false);

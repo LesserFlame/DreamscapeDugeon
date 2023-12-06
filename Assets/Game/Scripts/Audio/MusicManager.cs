@@ -24,4 +24,8 @@ public class MusicManager : Singleton<MusicManager>
     { 
         if (currentSongController != null) currentSongController.Stop();
     }
+    public void FadeSong(float duration = 3)
+    {
+        currentSongController.FadeVolume(duration);
+    }
 }
